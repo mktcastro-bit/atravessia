@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A TRAVESSIA — Partitura Visual</title>
+<style>
+  :root{
+    --bg:#0c0b11;
+    --bg2:#14121c;
+    --ink:#f0ebe2;
+    --ink-dim:#a49c92;
+    --line:rgba(240,235,226,.10);
+    --line-strong:rgba(240,235,226,.22);
+    --c1:#3f6f8f; --c2:#4e7a45; --c3:#a86a2e; --c4:#c2452d; --c5:#6f5f9e; --c6:#c9a227;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:14px;line-height:1.55;
+    background:
+      radial-gradient(900px 500px at 12% -8%, rgba(63,111,143,.20), transparent 60%),
+      radial-gradient(800px 460px at 62% 0%, rgba(194,69,45,.14), transparent 62%),
+      radial-gradient(900px 520px at 100% 10%, rgba(201,162,39,.12), transparent 60%),
+      var(--bg);
+    min-height:100vh;
+  }
+  .wrap{max-width:1440px;margin:0 auto;padding:38px 26px 90px}
+
+  /* ---------- header ---------- */
+  header{margin-bottom:30px}
+  .kicker{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-dim)}
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(38px,7vw,68px);font-weight:400;letter-spacing:.14em;
+    margin:.18em 0 .1em;line-height:1;
+    background:linear-gradient(92deg,#8fb8d4,#e8d9a8 45%,#e0836a);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .sub{font-family:Georgia,serif;font-style:italic;font-size:17px;color:#cfc6ba}
+  .meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .chip{
+    border:1px solid var(--line-strong);border-radius:999px;
+    padding:5px 13px;font-size:11.5px;color:var(--ink-dim);
+    letter-spacing:.05em;background:rgba(255,255,255,.02);
+  }
+  .arc{
+    margin-top:20px;padding:14px 18px;border-left:2px solid rgba(201,162,39,.5);
+    background:linear-gradient(90deg,rgba(201,162,39,.07),transparent);
+    font-family:Georgia,serif;font-style:italic;color:#d8cfc2;font-size:14px;
+  }
+
+  /* ---------- controls ---------- */
+  .bar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+    margin:30px 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line);
+  }
+  .bar .lbl{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-right:6px}
+  .tg{
+    border:1px solid var(--line-strong);background:rgba(255,255,255,.03);color:var(--ink-dim);
+    padding:6px 13px;border-radius:7px;font-size:12px;cursor:pointer;
+    font-family:inherit;transition:.16s;letter-spacing:.02em;
+  }
+  .tg:hover{border-color:rgba(240,235,226,.4);color:var(--ink)}
+  .tg.on{background:rgba(240,235,226,.93);color:#12111a;border-color:transparent;font-weight:600}
+
+  /* ---------- grid ---------- */
+  .scroller{overflow-x:auto;padding-bottom:8px}
+  .board{min-width:1080px}
+  .row{display:grid;grid-template-columns:var(--cols);gap:5px;margin-bottom:5px}
+  .stub{
+    position:sticky;left:0;z-index:5;background:var(--bg);
+    font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);
+    display:flex;align-items:center;padding:10px 12px 10px 0;
+    border-right:1px solid var(--line);
+  }
+  .stub b{display:block;color:#ded5c8;font-weight:600;letter-spacing:.16em}
+
+  /* ruler */
+  .ruler .tick{
+    font-size:10.5px;color:var(--ink-dim);letter-spacing:.08em;
+    border-left:1px solid var(--line-strong);padding:4px 0 6px 8px;
+  }
+  .ruler .tick i{font-style:normal;opacity:.6}
+
+  /* energy curve */
+  .curveBox{position:relative;height:104px;margin:2px 0 10px;border-radius:10px;
+    background:linear-gradient(180deg,rgba(255,255,255,.035),transparent);
+    border:1px solid var(--line);overflow:hidden}
+  .curveBox svg{position:absolute;inset:0;width:100%;height:100%}
+  .curveBox .cap{position:absolute;top:8px;left:12px;font-size:10px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--ink-dim)}
+
+  /* phase headers */
+  .ph{
+    position:relative;border-radius:11px 11px 4px 4px;padding:13px 14px 15px;
+    cursor:pointer;transition:.18s;overflow:hidden;
+    border:1px solid rgba(255,255,255,.09);
+    background:linear-gradient(165deg,color-mix(in srgb,var(--c) 40%,transparent),color-mix(in srgb,var(--c) 12%,transparent));
+  }
+  .ph:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.3)}
+  .ph.sel{outline:2px solid #f0ebe2;outline-offset:2px}
+  .ph .num{font-family:Georgia,serif;font-size:12px;letter-spacing:.3em;opacity:.75}
+  .ph .nm{font-family:Georgia,serif;font-size:19px;letter-spacing:.07em;margin:3px 0 5px;line-height:1.15}
+  .ph .tt{font-size:11px;color:rgba(255,255,255,.72);font-style:italic;line-height:1.35}
+  .ph .min{
+    position:absolute;top:11px;right:12px;font-size:10.5px;letter-spacing:.06em;
+    background:rgba(0,0,0,.34);border-radius:999px;padding:2px 8px;color:#fff;
+  }
+
+  /* layer cells */
+  .cell{
+    border-radius:8px;padding:11px 12px;font-size:12.2px;line-height:1.5;
+    background:rgba(255,255,255,.035);border:1px solid var(--line);
+    border-top:2px solid color-mix(in srgb,var(--c) 60%,transparent);
+    color:#cdc5b9;
+  }
+  .cell ul{list-style:none}
+  .cell li{padding-left:12px;position:relative;margin-bottom:3px}
+  .cell li:before{content:"";position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;
+    background:color-mix(in srgb,var(--c) 85%,white)}
+  .cell .q{font-family:Georgia,serif;font-style:italic;color:#e6ddcf;display:block;margin-top:6px}
+  .row.hidden{display:none}
+
+  /* ---------- detail panel ---------- */
+  .panel{
+    margin-top:26px;border-radius:14px;border:1px solid var(--line-strong);
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+    padding:26px 28px;display:none;
+  }
+  .panel.open{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .panel h2{font-family:Georgia,serif;font-weight:400;font-size:30px;letter-spacing:.08em;margin-bottom:3px}
+  .panel .psub{font-family:Georgia,serif;font-style:italic;color:var(--ink-dim);margin-bottom:18px}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;margin-bottom:20px}
+  .pcard{border:1px solid var(--line);border-radius:10px;padding:13px 14px;background:rgba(0,0,0,.2)}
+  .pcard h4{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);
+    font-weight:600;margin-bottom:7px}
+  .pcard p,.pcard li{font-size:12.6px;color:#cfc7bb}
+  .pcard ul{list-style:none}
+  .pcard li{padding-left:12px;position:relative;margin-bottom:3px}
+  .pcard li:before{content:"—";position:absolute;left:0;opacity:.45}
+  .ptext{font-size:13.6px;color:#d5ccc0;max-width:78ch}
+  .ptext p{margin-bottom:11px}
+  .ptext em{font-family:Georgia,serif;color:#efe4d0}
+  .close{float:right;background:none;border:1px solid var(--line-strong);color:var(--ink-dim);
+    border-radius:7px;padding:5px 11px;cursor:pointer;font-family:inherit;font-size:12px}
+  .close:hover{color:var(--ink)}
+
+  .note{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--ink-dim);max-width:80ch}
+  .note b{color:#ded5c8}
+  .open-q{margin-top:10px;display:flex;flex-wrap:wrap;gap:7px}
+  .open-q span{border:1px dashed rgba(240,235,226,.25);border-radius:6px;padding:4px 10px;font-size:11.5px}
+
+  /* ---------- portal de acesso ---------- */
+  .gate{
+    position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+    background:
+      radial-gradient(700px 420px at 50% 30%, rgba(63,111,143,.22), transparent 65%),
+      radial-gradient(600px 400px at 50% 90%, rgba(201,162,39,.12), transparent 65%),
+      #08070c;
+    transition:opacity .7s ease, visibility .7s;
+  }
+  .gate.out{opacity:0;visibility:hidden;pointer-events:none}
+  .gateBox{width:min(380px,88vw);text-align:center;animation:rise .8s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .gateBox .gk{font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#7d7568}
+  .gateBox h2{
+    font-family:Georgia,serif;font-weight:400;font-size:38px;letter-spacing:.2em;
+    margin:.24em 0 .1em;line-height:1;
+    background:linear-gradient(92deg,#8fb8d4,#e8d9a8 50%,#e0836a);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .gateBox .gs{font-family:Georgia,serif;font-style:italic;color:#8b8377;font-size:13px;margin-bottom:30px}
+  .gate input{
+    width:100%;padding:12px 15px;margin-bottom:10px;border-radius:9px;
+    background:rgba(255,255,255,.05);border:1px solid rgba(240,235,226,.16);
+    color:#f0ebe2;font-family:inherit;font-size:14px;text-align:center;letter-spacing:.08em;
+    transition:.18s;
+  }
+  .gate input::placeholder{color:#6d6559;letter-spacing:.16em;font-size:12px;text-transform:uppercase}
+  .gate input:focus{outline:none;border-color:rgba(232,217,168,.55);background:rgba(255,255,255,.08)}
+  .gate button{
+    width:100%;margin-top:6px;padding:12px;border-radius:9px;cursor:pointer;
+    border:1px solid rgba(232,217,168,.4);background:rgba(232,217,168,.1);
+    color:#e8d9a8;font-family:Georgia,serif;font-size:14px;letter-spacing:.22em;
+    text-transform:uppercase;transition:.2s;
+  }
+  .gate button:hover{background:#e8d9a8;color:#12111a;border-color:transparent}
+  .gate .err{margin-top:14px;font-size:12px;color:#d98a72;height:16px;opacity:0;transition:.2s}
+  .gate .err.show{opacity:1}
+  .gate.shake .gateBox{animation:shk .38s}
+  @keyframes shk{0%,100%{transform:none}20%{transform:translateX(-9px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+  body.locked .wrap{visibility:hidden}
+
+  @media(max-width:760px){
+    .wrap{padding:26px 14px 70px}
+    .stub{display:none}
+    .row{grid-template-columns:var(--colsm)}
+  }
+</style>
+</head>
+<body class="locked">
+
+<div class="gate" id="gate">
+  <div class="gateBox">
+    <div class="gk">acesso restrito</div>
+    <h2>A TRAVESSIA</h2>
+    <div class="gs">Do véu à consciência</div>
+    <form id="gform" autocomplete="off">
+      <input type="text" id="gu" placeholder="login" autocomplete="off" spellcheck="false">
+      <input type="password" id="gp" placeholder="senha" autocomplete="new-password">
+      <button type="submit">Atravessar</button>
+    </form>
+    <div class="err" id="gerr">Acesso não reconhecido.</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header>
+  <div class="kicker">Vivência sonora · roteiro de condução</div>
+  <h1>A TRAVESSIA</h1>
+  <div class="sub">Do véu à consciência</div>
+  <div class="meta">
+    <span class="chip">2h15 – 2h30</span>
+    <span class="chip">6 movimentos</span>
+    <span class="chip">som · corpo · respiração · movimento · voz · símbolo</span>
+    <span class="chip">O Louco · O Guerreiro · O Mago · O Sol · O Sábio · O Mundo</span>
+  </div>
+  <div class="arc">
+    tomar consciência do corpo → despertar o instinto → reunir a força → atravessar o fogo → aquietar → ascender → encontrar a sabedoria → celebrar e retornar
+  </div>
+</header>
+
+<div class="bar">
+  <span class="lbl">Camadas</span>
+  <button class="tg on" data-layer="som">Paisagem sonora & instrumentos</button>
+  <button class="tg on" data-layer="corpo">Corpo & movimento</button>
+  <button class="tg on" data-layer="voz">Voz & condução</button>
+  <button class="tg on" data-layer="simb">Símbolo & arquétipo</button>
+</div>
+
+<div class="scroller">
+  <div class="board" id="board"></div>
+</div>
+
+<div class="panel" id="panel"></div>
+
+<div class="note">
+  <b>Como usar.</b> Clique em qualquer movimento para abrir o detalhamento completo. Use os botões de camada para isolar uma dimensão por vez — útil para trabalhar só a instrumentação, só a condução falada, ou só a dramaturgia corporal. A curva mostra a intensidade energética proposta ao longo das 2h30: dois vales (abertura e etapa V) e um pico único no Fogo.
+  <div class="open-q">
+    <span>◇ nome definitivo da etapa V</span>
+    <span>◇ instrumentação definitiva por etapa</span>
+    <span>◇ repertório de cantos autorais</span>
+    <span>◇ testes com grupo-piloto</span>
+    <span>◇ ajuste fino dos tempos</span>
+  </div>
+</div>
+
+</div>
+
+<script>
+/* -------------------------------------------------------------------------
+   PORTAL DE ACESSO
+   Para trocar as credenciais, altere as duas linhas abaixo.
+   Atenção: esta é uma barreira simbólica, não criptografia. Quem abrir o
+   código-fonte da página consegue ler as credenciais. Serve para manter a
+   página fora do alcance casual, não para proteger segredo real.
+   ------------------------------------------------------------------------- */
+const ACESSO = { login:"vida", senha:"vida" };
+
+const gate=document.getElementById('gate'), gerr=document.getElementById('gerr');
+document.getElementById('gform').addEventListener('submit',ev=>{
+  ev.preventDefault();
+  const u=document.getElementById('gu').value.trim().toLowerCase();
+  const p=document.getElementById('gp').value.trim().toLowerCase();
+  if(u===ACESSO.login && p===ACESSO.senha){
+    gerr.classList.remove('show');
+    gate.classList.add('out');
+    document.body.classList.remove('locked');
+    setTimeout(()=>gate.remove(),750);
+  }else{
+    gerr.classList.add('show');
+    gate.classList.add('shake');
+    setTimeout(()=>gate.classList.remove('shake'),400);
+    document.getElementById('gp').value='';
+  }
+});
+document.getElementById('gu').focus();
+
+/* =========================================================================
+   DADOS — edite aqui. "min" = duração em minutos (a largura na linha
+   do tempo é proporcional). "e" = intensidade energética (0 a 1) nos
+   pontos inicial / meio / final de cada etapa.
+   ========================================================================= */
+const PHASES = [
+{
+  id:"I", nome:"ABERTURA", tag:"Percepção e consciência corporal", min:30, cor:"var(--c1)",
+  e:[.10,.14,.22],
+  estado:"repouso, receptividade, interiorização",
+  elemento:"espaço / água", centro:"corpo inteiro", arquetipo:"O Louco — o que se entrega ao início",
+  som:["sound healing","sons longos e harmônicos","tigelas","gongos muito suaves","silêncio como material"],
+  corpo:["deitados, imóveis","varredura corporal lenta: pés → couro cabeludo","respiração observada, depois consciente","transição: espreguiçar, suspirar, bocejar, levantar, alongar","movimentos espontâneos que o corpo pede"],
+  voz:["condução falada, tom baixo e lento","<q>Perceba o ar entrando. Perceba o ar saindo.</q>","<q>Não faça nada. Você não precisa chegar a lugar algum.</q>","<q>Existe alguma emoção presente? Não procure um nome. Perceba onde ela vive no corpo.</q>"],
+  simb:["Elemento: espaço / água","Centro: corpo inteiro","Estado: repouso e receptividade","Chegada, pousar, deixar o mundo do lado de fora"],
+  texto:`<p>Os participantes entram e deitam-se. A condução começa pela respiração, sem tentar modificá-la imediatamente.</p>
+  <p>Inicia-se uma varredura corporal, lentamente: pés, pernas, quadril, abdômen, peito, ombros, braços, mãos, pescoço, rosto, couro cabeludo, orelhas. A proposta é perceber sensações, temperatura, peso, tensão, pulsação. Trabalho com respiração mais consciente.</p>
+  <p>Depois, a atenção se volta aos sentimentos. Silêncio. Sound healing. A percepção começa a se ampliar.</p>
+  <p><em>Transição:</em> espreguiçar, pequenos movimentos, suspiros, bocejos. Levantar-se com alongamentos. Depois, movimentos espontâneos — tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar. Começam a entrar os sons da floresta.</p>`
+},
+{
+  id:"II", nome:"A FLORESTA", tag:"O despertar do animal", min:20, cor:"var(--c2)",
+  e:[.26,.40,.55],
+  estado:"instinto, liberdade, espontaneidade",
+  elemento:"terra", centro:"chakra básico", arquetipo:"O Animal — inteligência corporal",
+  som:["paisagem de floresta: água, vento, pássaros, animais","percussões muito discretas, crescendo","primeiras vocalizações do grupo"],
+  corpo:["reencontro do animal — não fantasia, mas instinto e presença","movimentos que se ampliam progressivamente","liberação corporal energética","rastejar, saltar, rolar, farejar, espreitar"],
+  voz:["vocalizações livres","sons animais, respiração audível","condução curta, mais convite que instrução"],
+  simb:["Elemento: terra","Centro: chakra básico","Estado: instinto e espontaneidade","O corpo antes da palavra"],
+  texto:`<p>A música começa a incorporar sons da floresta. A proposta é reencontrar o animal — não como fantasia de um animal específico, mas como inteligência corporal, instinto, percepção e presença. Pode haver vocalizações.</p>
+  <p>A música vai ganhando em intensidade, com percussões e batidas. Os movimentos se ampliam. Inicia-se uma liberação corporal energética, para depois evoluir para o corpo do guerreiro.</p>`
+},
+{
+  id:"III", nome:"O BATALHÃO", tag:"O despertar do guerreiro", min:25, cor:"var(--c3)",
+  e:[.58,.68,.78],
+  estado:"força, presença, poder coletivo",
+  elemento:"terra / fogo", centro:"eu encontro minha força no corpo e no coletivo", arquetipo:"O Guerreiro",
+  som:["percussão organizada, pulso claro","cantos inspirados na Taketina (criação autoral)","marcha, batida de pés, palmas","sonorizações coletivas"],
+  corpo:["movimentos ganham organização","peso dos pés, verticalidade, marcha","peito, olhar, sincronização coletiva","formação de roda","coreografia simples e repetível"],
+  voz:["canto coletivo","pulsação vocal em grupo","proteção, enfrentamento, limite, coragem"],
+  simb:["Elemento: terra / fogo","Arquétipo: O Guerreiro","Referências: Ogum, guerreiros da floresta, caboclos e africanos, dança de guerra Maori, xamânico","Mobilização — reunir a força"],
+  texto:`<p>Os movimentos começam a adquirir organização. A imagem do guerreiro pode ser explorada através de peso dos pés, verticalidade, marcha, pulsação, peito, olhar, voz, sincronização coletiva, proteção, enfrentamento, limite, coragem.</p>
+  <p>O ritmo cresce. O grupo começa a caminhar em conjunto. Forma-se uma roda e inicia-se uma pulsação coletiva, com coreografia e voz. Entram sonorizações e cantos inspirados na Taketina, criados especificamente para a experiência.</p>
+  <p><em>Distinção importante:</em> no Batalhão o centro é <em>eu encontro minha força no corpo e no coletivo</em>. No Fogo, <em>eu atravesso o limite da minha própria força e me transformo</em>. O Batalhão é mobilização; o Fogo é transmutação.</p>`
+},
+{
+  id:"IV", nome:"O FOGO", tag:"Poder e transformação · o Mago", min:20, cor:"var(--c4)",
+  e:[.85,1,.62],
+  estado:"intensidade, coragem, expressão, transmutação",
+  elemento:"fogo", centro:"plexo solar", arquetipo:"O Mago / O Alquimista",
+  som:["percussão em crescimento","polirritmia","vibração alta, densidade máxima","ápice e depois desaceleração"],
+  corpo:["posições cada vez mais expansivas","peito aberto, pernas firmes, braços fortes","olhar presente","práticas guerreiras de várias culturas — reinterpretadas de forma autoral"],
+  voz:["vocalizações mais intensas","grito, sopro, som que atravessa","voz como agente de transmutação"],
+  simb:["Elemento: fogo","Centro: plexo solar","Arquétipo: O Mago","Transmutação — atravessar o próprio limite"],
+  texto:`<p>A percussão cresce. O corpo assume posições cada vez mais expansivas. Aumenta a vibração. Peito aberto, pernas firmes, braços fortes, olhar presente, vocalizações mais intensas. Polirritmia.</p>
+  <p>Pode haver elementos inspirados em práticas corporais guerreiras de diferentes culturas — sempre reinterpretados de maneira autoral e não como reprodução de um ritual tradicional específico.</p>
+  <p>Depois de chegar a um ápice, começa a desaceleração.</p>`
+},
+{
+  id:"V", nome:"A ASCENSÃO", tag:"Do poder à presença · nome a definir", min:30, cor:"var(--c5)",
+  e:[.48,.28,.14],
+  estado:"integração, desaceleração",
+  elemento:"éter", centro:"coração", arquetipo:"O Sábio — o que se aquieta para ver",
+  som:["instrumentos metálicos: sinos, sons sustentados","paisagem deixa de ser terrestre e torna-se aérea","música progressivamente mais melódica","o ritmo praticamente desaparece"],
+  corpo:["desaceleração","movimentos mais fluidos","respiração mais longa e tranquila","atenção percorre o corpo de baixo para cima"],
+  voz:["mantras","vocalizações longas e sons sustentados","<q>O que você percebe agora no seu corpo que não percebia no início?</q>"],
+  simb:["Elemento: éter","Centro: coração","Percurso: terra, água, fogo, ar, espaço","Pés, base, ventre, coração, garganta, terceiro olho, alto da cabeça"],
+  texto:`<p>A percussão diminui. O corpo começa a desacelerar. Movimentos mais fluidos. Respiração mais longa e tranquila. Entram instrumentos metálicos: sinos, sons sustentados.</p>
+  <p>A paisagem sonora deixa de ser terrestre e começa a tornar-se aérea. A voz também muda, evoluindo para mantras com vocalizações longas e sons sustentados.</p>
+  <p>A música torna-se progressivamente mais melódica. O ritmo praticamente desaparece. A atenção percorre o corpo de baixo para cima: terra, água, fogo, ar, espaço.</p>
+  <p><em>Sugestões de nome:</em> A Ascensão · O Pouso · A Rendição · O Ar · A Clareira · Depois do Fogo.</p>`
+},
+{
+  id:"VI", nome:"O DESPERTAR", tag:"A celebração da consciência", min:25, cor:"var(--c6)",
+  e:[.24,.46,.30],
+  estado:"integração, alegria, comunhão",
+  elemento:"luz", centro:"coroa / campo coletivo", arquetipo:"O Sol · A Estrela · O Mundo · O Sábio",
+  som:["uma voz e o violão","música de celebração","o grupo canta junto","retorno ao silêncio no final"],
+  corpo:["sentar em roda","gesto simples e comunitário","olhar-se, reconhecer-se","retorno ao cotidiano"],
+  voz:["canção conduzida","partilha breve, se couber","palavra de fechamento e retorno"],
+  simb:["Elemento: luz","Arquétipos: Sol, Estrela, Mundo, Sábio","Estado: alegria e comunhão","A travessia se completa e se celebra"],
+  texto:`<p>Uma voz, o violão. A celebração.</p>
+  <p>Aqui a experiência se fecha em comunhão: o que foi atravessado individualmente volta ao coletivo em forma de canto e alegria. É o momento de reconhecer o grupo, nomear a travessia e devolver cada pessoa ao mundo — diferente de como chegou.</p>`
+}
+];
+
+const LAYERS = [
+  {key:"som",  label:"Paisagem sonora<br>& instrumentos"},
+  {key:"corpo",label:"Corpo<br>& movimento"},
+  {key:"voz",  label:"Voz<br>& condução"},
+  {key:"simb", label:"Símbolo<br>& arquétipo"}
+];
+
+/* ---------------- render ---------------- */
+const TOTAL = PHASES.reduce((s,p)=>s+p.min,0);
+const board = document.getElementById('board');
+const cols  = "170px " + PHASES.map(p=>p.min+"fr").join(" ");
+const colsm = PHASES.map(p=>p.min+"fr").join(" ");
+document.documentElement.style.setProperty('--cols',cols);
+document.documentElement.style.setProperty('--colsm',colsm);
+
+function fmt(m){const h=Math.floor(m/60),r=m%60;return h?`${h}h${String(r).padStart(2,'0')}`:`${r}min`}
+
+let html = "";
+
+/* ruler */
+let acc=0;
+html += `<div class="row ruler"><div class="stub"><b>Tempo</b></div>`;
+PHASES.forEach(p=>{ html += `<div class="tick">${fmt(acc)} <i>→ ${fmt(acc+p.min)}</i></div>`; acc+=p.min; });
+html += `</div>`;
+
+/* energy curve */
+html += `<div class="row"><div class="stub"><b>Intensidade</b></div><div style="grid-column:2 / -1">
+  <div class="curveBox"><span class="cap">Curva energética</span>${curveSVG()}</div></div></div>`;
+
+/* phases */
+html += `<div class="row"><div class="stub"><b>Movimento</b></div>`;
+PHASES.forEach((p,i)=>{
+  html += `<div class="ph" style="--c:${p.cor}" data-i="${i}">
+    <span class="min">${p.min} min</span>
+    <div class="num">${p.id}</div>
+    <div class="nm">${p.nome}</div>
+    <div class="tt">${p.tag}</div>
+  </div>`;
+});
+html += `</div>`;
+
+/* layers */
+LAYERS.forEach(L=>{
+  html += `<div class="row" data-row="${L.key}"><div class="stub"><b>${L.label}</b></div>`;
+  PHASES.forEach(p=>{
+    html += `<div class="cell" style="--c:${p.cor}"><ul>${p[L.key].map(x=>`<li>${x.replace(/<q>(.*?)<\/q>/g,'<span class="q">$1</span>')}</li>`).join("")}</ul></div>`;
+  });
+  html += `</div>`;
+});
+
+board.innerHTML = html;
+
+function curveSVG(){
+  const W=1000,H=100;
+  let pts=[],x=0;
+  PHASES.forEach(p=>{
+    const w=(p.min/TOTAL)*W;
+    p.e.forEach((v,k)=>pts.push([x+w*(k/2), H-8-v*(H-22)]));
+    x+=w;
+  });
+  let d=`M${pts[0][0]},${pts[0][1]}`;
+  for(let i=1;i<pts.length;i++){
+    const [px,py]=pts[i-1],[cx,cy]=pts[i],mx=(px+cx)/2;
+    d+=` C${mx},${py} ${mx},${cy} ${cx},${cy}`;
+  }
+  const area=d+` L${W},${H} L0,${H} Z`;
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="g" x1="0" x2="1">
+        <stop offset="0%"   stop-color="#3f6f8f"/>
+        <stop offset="25%"  stop-color="#4e7a45"/>
+        <stop offset="45%"  stop-color="#a86a2e"/>
+        <stop offset="62%"  stop-color="#e0563a"/>
+        <stop offset="82%"  stop-color="#6f5f9e"/>
+        <stop offset="100%" stop-color="#c9a227"/>
+      </linearGradient>
+      <linearGradient id="ga" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e0836a" stop-opacity=".30"/>
+        <stop offset="100%" stop-color="#e0836a" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="${area}" fill="url(#ga)"/>
+    <path d="${d}" fill="none" stroke="url(#g)" stroke-width="2.4" vector-effect="non-scaling-stroke"/>
+  </svg>`;
+}
+
+/* ---------------- interações ---------------- */
+const panel = document.getElementById('panel');
+
+board.addEventListener('click', e=>{
+  const el = e.target.closest('.ph'); if(!el) return;
+  const i = +el.dataset.i;
+  document.querySelectorAll('.ph').forEach(n=>n.classList.remove('sel'));
+  el.classList.add('sel');
+  openPanel(i);
+});
+
+function openPanel(i){
+  const p = PHASES[i];
+  panel.innerHTML = `
+    <button class="close" onclick="document.getElementById('panel').classList.remove('open');document.querySelectorAll('.ph').forEach(n=>n.classList.remove('sel'))">fechar</button>
+    <h2 style="color:${p.cor.startsWith('var')?'':p.cor}">${p.id} — ${p.nome}</h2>
+    <div class="psub">${p.tag} · ${p.min} minutos</div>
+    <div class="pgrid">
+      <div class="pcard"><h4>Estado</h4><p>${p.estado}</p></div>
+      <div class="pcard"><h4>Elemento</h4><p>${p.elemento}</p></div>
+      <div class="pcard"><h4>Centro</h4><p>${p.centro}</p></div>
+      <div class="pcard"><h4>Arquétipo</h4><p>${p.arquetipo}</p></div>
+    </div>
+    <div class="pgrid">
+      <div class="pcard"><h4>Paisagem sonora & instrumentos</h4><ul>${p.som.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+      <div class="pcard"><h4>Corpo & movimento</h4><ul>${p.corpo.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+      <div class="pcard"><h4>Voz & condução</h4><ul>${p.voz.map(x=>x.replace(/<\/?q>/g,'')).map(x=>`<li>${x}</li>`).join("")}</ul></div>
+      <div class="pcard"><h4>Símbolo & arquétipo</h4><ul>${p.simb.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    </div>
+    <div class="ptext">${p.texto}</div>`;
+  panel.classList.add('open');
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+document.querySelectorAll('.tg[data-layer]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    b.classList.toggle('on');
+    document.querySelector(`.row[data-row="${b.dataset.layer}"]`).classList.toggle('hidden', !b.classList.contains('on'));
+  });
+});
+</script>
+</body>
+</html>
