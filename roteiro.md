@@ -71,10 +71,11 @@ A música vai ganhando em intensidade, com percussões, batidas. Os movimentos s
 **Elemento:** água
 **Arquétipo:** O Sábio
 **Paisagem sonora:** oceano, trovão e ondas
+**Voz:** vocalizações da sereia — humming
 
 Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e transmutadas pelo poder do som e por essa conexão com as emoções profundas — como se a água as limpasse.
 
-*(Demais camadas — estado, centro, voz — ainda não especificadas.)*
+*(Demais camadas — estado, centro — ainda não especificadas.)*
 
 ---
 

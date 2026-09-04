@@ -2,6 +2,14 @@
 
 ---
 
+## v0.15 — 2026-09-04 · a voz do Mar
+
+Por decisão do autor, o movimento III (O MAR) ganha a camada de voz:
+**vocalizações da sereia — humming**. Entra no roteiro e na linha *Voz &
+condução* da partitura. Restam não especificados no Mar: estado e centro.
+
+---
+
 ## v0.14 — 2026-09-04 · sai o "Novo relaxamento"; entra a nota "As pessoas no centro"
 
 **Sai, por decisão do autor, o movimento VI — "Novo relaxamento · Do poder à
