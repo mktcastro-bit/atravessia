@@ -2,6 +2,24 @@
 
 ---
 
+## v0.7 — 2026-09-04 · a transição do movimento I é o momento do violão
+
+Por decisão do autor, a transição do movimento I passa a ser o momento do
+violão, com todos permanecendo deitados. No `roteiro.md`, o bloco de transição
+do I fica: *"Música de transição – violão. Todos permanecem deitados."* Na
+partitura, a coluna de transição I→II ganha a linha *Corpo & movimento* ("Todos
+permanecem deitados"), e a camada corpo do movimento I perde os dois itens do
+parágrafo antigo.
+
+**Sai do roteiro o parágrafo abaixo — registrado na íntegra porque descrevia a
+passagem do chão para o corpo em pé e a entrada dos sons da floresta, e isso
+agora não consta em nenhum movimento. Decisão pendente do autor: se volta em
+algum ponto (por exemplo no início do II) ou se sai definitivamente.**
+
+> Os participantes são convidados a começar a se espreguiçar e a produzir pequenos movimentos, suspiros, bocejos. Em seguida, vão se levantando, com alongamentos. Depois, movimentos espontâneos que o corpo pede. Podem surgir: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar. Começam a entrar os sons da floresta e os participantes são convidados a perceberem esses sons.
+
+---
+
 ## v0.6 — 2026-09-04 · transição II→III: voz e violão
 
 Por decisão do autor, a transição entre A Floresta (II) e O Batalhão (III) é

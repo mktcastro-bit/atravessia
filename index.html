@@ -248,7 +248,7 @@ const PHASES = [
   estado:"repouso, receptividade, interiorização",
   elemento:"espaço / água", centro:"corpo inteiro", arquetipo:"",
   som:["sound healing","sons longos","harmônicos","tigelas","gongos muito suaves","Silêncio"],
-  corpo:["Os participantes entram e deitam-se","Varredura corporal, lentamente: pés, pernas, quadril, abdômen, peito, ombros, braços, mãos, pescoço, rosto, couro cabeludo, orelhas","Perceber sensações, temperatura, peso, tensão, pulsação","Trabalho com respiração mais consciente","<i>Transição:</i> espreguiçar, pequenos movimentos, suspiros, bocejos, levantar, alongamentos","Movimentos espontâneos que o corpo pede: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar"],
+  corpo:["Os participantes entram e deitam-se","Varredura corporal, lentamente: pés, pernas, quadril, abdômen, peito, ombros, braços, mãos, pescoço, rosto, couro cabeludo, orelhas","Perceber sensações, temperatura, peso, tensão, pulsação","Trabalho com respiração mais consciente","<i>Transição:</i> todos permanecem deitados"],
   voz:["<q>Perceba o ar entrando.</q>","<q>Perceba o ar saindo.</q>","<q>Não faça nada.</q>","<q>Você não precisa chegar a lugar algum.</q>","<q>Existe alguma emoção presente? Não procure um nome. Perceba apenas onde ela vive no corpo.</q>"],
   simb:["Estado: repouso, receptividade, interiorização","Elemento: espaço / água","Centro: corpo inteiro"],
   texto:`<p>Os participantes entram e deitam-se. A condução começa pela respiração, sem tentar modificá-la imediatamente: <em>"Perceba o ar entrando." "Perceba o ar saindo." "Não faça nada." "Você não precisa chegar a lugar algum."</em></p>
@@ -256,7 +256,7 @@ const PHASES = [
   <p>A proposta é perceber sensações, temperatura, peso, tensão, pulsação. Trabalho com respiração mais consciente.</p>
   <p>Depois, a atenção se volta aos sentimentos: <em>"Existe alguma emoção presente? Não procure um nome. Perceba apenas onde ela vive no corpo."</em></p>
   <p>Silêncio. Sound healing. A percepção começa a se ampliar.</p>
-  <p><em>Transição.</em> Os participantes são convidados a começar a se espreguiçar e a produzir pequenos movimentos, suspiros, bocejos. Em seguida, vão se levantando, com alongamentos. Depois, movimentos espontâneos que o corpo pede. Podem surgir: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar. Começam a entrar os sons da floresta e os participantes são convidados a perceberem esses sons.</p>`
+  <p><em>Transição.</em> Música de transição – violão. Todos permanecem deitados.</p>`
 },
 {
   id:"II", nome:"A FLORESTA", tag:"O despertar do animal", cor:"var(--c2)",
@@ -341,7 +341,7 @@ const ICONS = {
 };
 
 const TRANS = [
-  {de:"I",   para:"II",  som:["Música de transição – violão"], icones:["violao"]},
+  {de:"I",   para:"II",  som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
   {de:"II",  para:"III", som:["Música de transição – voz e violão"], icones:["voz","violao"]},
   {de:"III", para:"IV",  som:[]},
   {de:"IV",  para:"V",   som:[]},
@@ -349,7 +349,7 @@ const TRANS = [
 ];
 const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"
-  ? `<div class="tr"></div>`
+  ? `<div class="tr">${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
   : `<div class="tr">${(tr.icones||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
 
 const LAYERS = [

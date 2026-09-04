@@ -46,9 +46,7 @@ A percepção começa a se ampliar.
 
 **Transição**
 
-Os participantes são convidados a começar a se espreguiçar e a produzir pequenos movimentos, suspiros, bocejos. Em seguida, vão se levantando, com alongamentos. Depois, movimentos espontâneos que o corpo pede. Podem surgir: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar. Começam a entrar os sons da floresta e os participantes são convidados a perceberem esses sons.
-
-**Música de transição** – violão
+**Música de transição** – violão. Todos permanecem deitados.
 
 ---
 
