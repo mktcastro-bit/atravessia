@@ -2,6 +2,17 @@
 
 ---
 
+## v0.6 — 2026-09-04 · transição II→III: voz e violão
+
+Por decisão do autor, a transição entre A Floresta (II) e O Batalhão (III) é
+**voz e violão**. Entra no `roteiro.md` como bloco próprio entre os dois
+movimentos, e na partitura na coluna de transição II→III, com os ícones de voz
+e de violão.
+
+As transições passam a aceitar mais de um ícone (`icones`, em lista).
+
+---
+
 ## v0.5 — 2026-09-04 · ícone na transição
 
 Ícone de violão ao lado de "Música de transição – violão", na coluna de

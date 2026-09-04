@@ -64,6 +64,8 @@ A música começa a incorporar sons da floresta. A proposta é reencontrar o ani
 
 A música vai ganhando em intensidade, com percussões, batidas. Os movimentos se ampliam. Inicia-se uma liberação corporal energética, para depois evoluir para o corpo do guerreiro
 
+**Música de transição** – voz e violão
+
 ---
 
 ## III — O BATALHÃO

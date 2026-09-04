@@ -325,7 +325,7 @@ const PHASES = [
 // uma música de transição entre um movimento e o seguinte. Só a primeira está
 // especificada no roteiro; as demais ficam marcadas como não especificadas.
 // Ícones das transições — SVG embutido, traço fino, cor herdada (currentColor).
-// "voz" já está definido para uso futuro; só aparece quando uma transição o indicar.
+// Cada transição lista os seus em `icones`, na ordem em que aparecem.
 const ICONS = {
   violao: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <path d="M8.2 21.5c-2.6 0-4.7-2-4.7-4.5 0-1.6.8-2.6 1.6-3.4.6-.6.9-1.2.9-2 0-2 1.6-3.5 3.6-3.5s3.6 1.5 3.6 3.5c0 .8.3 1.4.9 2 .8.8 1.6 1.8 1.6 3.4 0 2.5-2.1 4.5-4.7 4.5z"/>
@@ -342,8 +342,8 @@ const ICONS = {
 };
 
 const TRANS = [
-  {de:"I",   para:"II",  som:["Música de transição – violão"], icone:"violao"},
-  {de:"II",  para:"III", som:[]},
+  {de:"I",   para:"II",  som:["Música de transição – violão"], icones:["violao"]},
+  {de:"II",  para:"III", som:["Música de transição – voz e violão"], icones:["voz","violao"]},
   {de:"III", para:"IV",  som:[]},
   {de:"IV",  para:"V",   som:[]},
   {de:"V",   para:"VI",  som:[]},
@@ -351,7 +351,7 @@ const TRANS = [
 const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"
   ? `<div class="tr"></div>`
-  : `<div class="tr">${tr.icone && ICONS[tr.icone] ? `<span class="ico">${ICONS[tr.icone]}</span>` : ""}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
+  : `<div class="tr">${(tr.icones||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
 
 const LAYERS = [
   {key:"som",  label:"Paisagem<br>sonora"},
