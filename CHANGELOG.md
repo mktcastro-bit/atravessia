@@ -2,6 +2,20 @@
 
 ---
 
+## v0.11 — 2026-09-04 · linha de tempo
+
+Nova linha **Tempo** acima dos movimentos na partitura, com uma célula por
+movimento e por transição. Todas entram como *a definir*: os tempos por
+movimento não constam do roteiro (a divisão da v0.1 foi retirada na v0.2 por
+não ser texto do autor). O único número exibido é o total do roteiro,
+2h15–2h30, junto do rótulo da linha.
+
+Para preencher: campo `tempo` (em minutos) em cada item de `PHASES` e de
+`TRANS`, no `index.html`. Quando houver valores, a linha mostra a soma ao lado
+do total do roteiro.
+
+---
+
 ## v0.10 — 2026-09-04 · corpo e elemento do Mar
 
 Por decisão do autor, o movimento III (O MAR) ganha elemento **água** e o corpo

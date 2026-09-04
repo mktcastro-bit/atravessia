@@ -86,6 +86,14 @@
   .tr .vazio{color:#6d6559;font-style:italic;font-size:10px}
   .tr .ico{width:20px;height:20px;color:var(--c6);opacity:.9;flex:none}
   .tr .ico svg{width:100%;height:100%;display:block}
+  .row.tempo{margin-bottom:9px}
+  .tcell{border-radius:8px;padding:7px 8px;text-align:center;font-size:12px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line);color:#cdc5b9;
+    display:flex;align-items:center;justify-content:center;min-height:34px}
+  .tcell b{font-family:Georgia,serif;font-size:14px;color:#e6ddcf;letter-spacing:.03em}
+  .tcell.tr{border-style:dashed;padding:4px 2px}
+  .tcell .vazio{font-size:10.5px}
+  .stub .tot{display:block;font-size:9.5px;letter-spacing:.06em;text-transform:none;color:#7d7568;margin-top:3px}
   .row.hidden{display:none}
 
   .panel{margin-top:26px;border-radius:14px;border:1px solid var(--line-strong);
@@ -244,7 +252,7 @@ try{ gu.focus(); }catch(e){}
    ========================================================================= */
 const PHASES = [
 {
-  id:"I", nome:"INTRODUÇÃO / ABERTURA", tag:"Percepção e consciência corporal", cor:"var(--c1)",
+  id:"I", tempo:null, nome:"INTRODUÇÃO / ABERTURA", tag:"Percepção e consciência corporal", cor:"var(--c1)",
   estado:"repouso, receptividade, interiorização",
   elemento:"espaço / água", centro:"corpo inteiro", arquetipo:"",
   som:["sound healing","sons longos","harmônicos","tigelas","gongos muito suaves","Silêncio"],
@@ -259,7 +267,7 @@ const PHASES = [
   <p><em>Transição.</em> Música de transição – violão. Todos permanecem deitados.</p>`
 },
 {
-  id:"II", nome:"A FLORESTA", tag:"O despertar do animal", cor:"var(--c2)",
+  id:"II", tempo:null, nome:"A FLORESTA", tag:"O despertar do animal", cor:"var(--c2)",
   estado:"instinto, liberdade, espontaneidade",
   elemento:"Terra", centro:"chakra básico", arquetipo:"",
   som:["floresta","água","vento","pássaros","animais","percussões muito discretas","A música vai ganhando em intensidade, com percussões, batidas"],
@@ -270,7 +278,7 @@ const PHASES = [
   <p>A música vai ganhando em intensidade, com percussões, batidas. Os movimentos se ampliam. Inicia-se uma liberação corporal energética, para depois evoluir para o corpo do guerreiro.</p>`
 },
 {
-  id:"III", nome:"O MAR", tag:"", cor:"var(--c3)",
+  id:"III", tempo:null, nome:"O MAR", tag:"", cor:"var(--c3)",
   estado:"", elemento:"água", centro:"", arquetipo:"O Sábio",
   som:["oceano","trovão","ondas"],
   corpo:["Corpo deitado","As emoções ativadas pelo elemento água são visitadas e transmutadas pelo poder do som e pela conexão com as emoções profundas — como se a água as limpasse"],
@@ -281,7 +289,7 @@ const PHASES = [
   <p><em>Demais camadas — estado, centro, voz — ainda não especificadas no roteiro.</em></p>`
 },
 {
-  id:"IV", nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
+  id:"IV", tempo:null, nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
   estado:"intensidade, coragem, expressão, transmutação",
   elemento:"fogo", centro:"plexo solar", arquetipo:"o Mago",
   som:["A percussão cresce","Aumenta a vibração","Polirritmia"],
@@ -293,7 +301,7 @@ const PHASES = [
   <p>Depois de chegar a um ápice, começa a desaceleração.</p>`
 },
 {
-  id:"V", nome:"Novo relaxamento", tag:"Do poder à presença · (não sei bem que nome dar aqui)", cor:"var(--c5)",
+  id:"V", tempo:null, nome:"Novo relaxamento", tag:"Do poder à presença · (não sei bem que nome dar aqui)", cor:"var(--c5)",
   estado:"integração, desaceleração",
   elemento:"éter", centro:"coração", arquetipo:"",
   som:["A percussão diminui","Entram instrumentos metálicos: sinos, sons sustentados","A paisagem sonora deixa de ser terrestre e começa a tornar-se aérea","A música torna-se progressivamente mais melódica","O ritmo praticamente desaparece"],
@@ -306,7 +314,7 @@ const PHASES = [
   <p>A música torna-se progressivamente mais melódica. O ritmo praticamente desaparece. A respiração fica tranquila. A atenção percorre o corpo de baixo para cima: terra, água, fogo, ar, espaço. Sentir: pés, base, ventre, coração, garganta, terceiro olho, alto da cabeça.</p>`
 },
 {
-  id:"VI", nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
+  id:"VI", tempo:null, nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
   estado:"integração, alegria, comunhão",
   elemento:"luz", centro:"", arquetipo:"Sol / Estrela / Mundo / O Sábio",
   som:["Uma voz, o violão"],
@@ -337,11 +345,11 @@ const ICONS = {
 };
 
 const TRANS = [
-  {de:"I",   para:"II",  som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
-  {de:"II",  para:"III", som:["Música de transição – voz e violão"], icones:["voz","violao"]},
-  {de:"III", para:"IV",  som:[]},
-  {de:"IV",  para:"V",   som:[]},
-  {de:"V",   para:"VI",  som:[]},
+  {de:"I",   para:"II",  tempo:null, som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
+  {de:"II",  para:"III", tempo:null, som:["Música de transição – voz e violão"], icones:["voz","violao"]},
+  {de:"III", para:"IV",  tempo:null, som:[]},
+  {de:"IV",  para:"V",   tempo:null, som:[]},
+  {de:"V",   para:"VI",  tempo:null, som:[]},
 ];
 const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"
@@ -357,6 +365,24 @@ const LAYERS = [
 
 const board = document.getElementById('board');
 let html = "";
+
+// Linha de tempo. Os tempos por movimento e por transição ainda não constam do
+// roteiro (a divisão da v0.1 foi retirada na v0.2 por não ser texto do autor);
+// ficam "a definir" até ele preencher `tempo` em cada item. O único número
+// conhecido é o total do roteiro, 2h15–2h30.
+const fmtMin = m => m == null ? `<span class="vazio">a definir</span>`
+  : m >= 60 ? `<b>${Math.floor(m/60)}h${m%60 ? String(m%60).padStart(2,"0") : ""}</b>` : `<b>${m} min</b>`;
+const definidos = [...PHASES, ...TRANS].map(x=>x.tempo).filter(x=>x!=null);
+const soma = definidos.reduce((a,b)=>a+b,0);
+const totLabel = definidos.length
+  ? `soma: ${fmtMin(soma).replace(/<\/?b>/g,"")} · roteiro: 2h15–2h30`
+  : `roteiro: 2h15–2h30`;
+html += `<div class="row tempo"><div class="stub"><b>Tempo</b><span class="tot">${totLabel}</span></div>`;
+PHASES.forEach((p,i)=>{
+  html += `<div class="tcell" style="--c:${p.cor}">${fmtMin(p.tempo)}</div>`;
+  if (i < TRANS.length) html += `<div class="tcell tr">${fmtMin(TRANS[i].tempo)}</div>`;
+});
+html += `</div>`;
 
 html += `<div class="row"><div class="stub"><b>Movimento</b></div>`;
 PHASES.forEach((p,i)=>{
