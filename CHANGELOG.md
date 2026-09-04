@@ -11,6 +11,9 @@ e de violão.
 
 As transições passam a aceitar mais de um ícone (`icones`, em lista).
 
+Violão redesenhado — corpo em oito, braço longo e mão; o desenho da v0.5 lia
+como pera quando ampliado.
+
 ---
 
 ## v0.5 — 2026-09-04 · ícone na transição
