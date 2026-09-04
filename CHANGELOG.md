@@ -2,6 +2,16 @@
 
 ---
 
+## v0.20 — 2026-09-04 · ícone de sukhasana na virada
+
+Por decisão do autor, a transição Mar → Vento ganha o ícone de uma pessoa
+sentada em sukhasana, porque é sentados que se iniciam os mantras. SVG de
+traço embutido, na linha *Corpo & movimento* da coluna de virada, acima da
+frase. As transições passam a aceitar ícones também na linha de corpo
+(`icones_corpo`). Nenhuma alteração de texto.
+
+---
+
 ## v0.19 — 2026-09-04 · a coluna de virada fica larga
 
 A transição em destaque (Mar → Vento) passa a ter **coluna larga** — 150 px
