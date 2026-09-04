@@ -360,11 +360,11 @@ const ICONS = {
 };
 
 const TRANS = [
-  {de:"I",   para:"II",  tempo:null, som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
-  {de:"II",  para:"III", tempo:null, som:["Música de transição – voz e violão"], icones:["voz","violao"]},
-  {de:"III", para:"IV",  tempo:null, som:[]},
-  {de:"IV",  para:"V",   tempo:null, som:[]},
-  {de:"V",   para:"VI",  tempo:null, som:[]},
+  {de:"I",   para:"II",  tempo:5, som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
+  {de:"II",  para:"III", tempo:5, som:["Música de transição – voz e violão"], icones:["voz","violao"]},
+  {de:"III", para:"IV",  tempo:8, som:[]},
+  {de:"IV",  para:"V",   tempo:5, som:[]},
+  {de:"V",   para:"VI",  tempo:5, som:[]},
 ];
 const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"

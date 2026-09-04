@@ -2,6 +2,18 @@
 
 ---
 
+## v0.17 — 2026-09-04 · tempo das transições
+
+Por decisão do autor: **transições de 5 minutos**, exceto **Mar → Vento, de
+8 minutos**. Entra no cabeçalho do roteiro e na linha de tempo da partitura.
+
+⚠️ Com isso a soma passa a **1h48** (80 min de movimentos + 28 de transições),
+contra a duração declarada de **1h20**. A linha de tempo mostra as duas.
+Pendente do autor: encolher os movimentos para caber em 1h20 (52 min ÷ 6 =
+8 min 40 s cada) ou declarar a duração como 1h48.
+
+---
+
 ## v0.16 — 2026-09-04 · duração 1h20, movimentos com o mesmo tempo
 
 Por decisão do autor, a vivência passa a durar **1h20** (era "2h15–2h30

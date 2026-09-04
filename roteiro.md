@@ -12,7 +12,7 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 **Duração:** 1h20
 
 **Estrutura:** 6 etapas/movimentos
-**Tempo:** os seis movimentos com a mesma duração — 13 min 20 s cada; transições a definir.
+**Tempo:** os seis movimentos com a mesma duração — 13 min 20 s cada. Transições de 5 min, exceto Mar → Vento, de 8 min.
 
 **Transições:** entre cada movimento e o seguinte, uma música de transição.
 
