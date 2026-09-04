@@ -3,7 +3,7 @@
 Roteiro para uma vivência – uma travessia – com sound healing.
 Uma jornada sonora, corporal, vocal e simbólica de despertar.
 
-**Duração sugerida:** 2h15–2h30 · **Estrutura:** 7 etapas/movimentos
+**Duração sugerida:** 2h15–2h30 · **Estrutura:** 6 etapas/movimentos
 
 > Projeto autoral em desenvolvimento. Este repositório é o caderno de trabalho da criação.
 
@@ -20,7 +20,7 @@ Uma jornada sonora, corporal, vocal e simbólica de despertar.
 ### Sobre a partitura visual
 
 A partitura **não acrescenta nada ao roteiro**. Ela apenas reorganiza o texto existente:
-os sete movimentos lado a lado na horizontal, e o conteúdo de cada um distribuído em
+os seis movimentos lado a lado na horizontal, e o conteúdo de cada um distribuído em
 quatro camadas — paisagem sonora, corpo e movimento, voz e condução, estado/elemento/centro.
 Onde o roteiro ainda não especifica uma camada, a célula aparece marcada como
 *não especificado no roteiro*, em vez de preenchida por suposição.

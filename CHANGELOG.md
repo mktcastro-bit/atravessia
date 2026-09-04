@@ -2,6 +2,40 @@
 
 ---
 
+## v0.14 — 2026-09-04 · sai o "Novo relaxamento"; entra a nota "As pessoas no centro"
+
+**Sai, por decisão do autor, o movimento VI — "Novo relaxamento · Do poder à
+presença (não sei bem que nome dar aqui)".** O Despertar passa a ser o VI; a
+vivência volta a ter 6 movimentos e 5 transições.
+
+Dois pontos do roteiro ficam apontando para o que saiu, deixados como
+estavam à espera do autor: o princípio dramatúrgico do cabeçalho ("→ aquietar →
+ascender →") e a subida da atenção pelos centros — garganta, terceiro olho,
+alto da cabeça — que só existia neste movimento.
+
+**Entra, a pedido do autor, a nota "As pessoas no centro"** — por que esta
+travessia passa pelo corpo e pela voz — no fim do `roteiro.md` e no rodapé da
+partitura. Texto redigido pela partitura; marcado como tal.
+
+**Texto integral do movimento que saiu:**
+
+> ## VI — Novo relaxamento (não sei bem que nome dar aqui)
+> ### Do poder à presença
+>
+> **Estado:** integração, desaceleração
+> **Elemento:** éter
+> **Centro:** coração
+>
+> A percussão diminui. O corpo começa a desacelerar. Movimentos mais fluidos. Respiração mais longa e tranquila. Entram instrumentos metálicos: sinos, sons sustentados.
+>
+> "O que você percebe agora no seu corpo que não percebia no início?"
+>
+> A paisagem sonora deixa de ser terrestre e começa a tornar-se aérea. A voz também muda, evoluindo para mantras com vocalizações longas e sons sustentados.
+>
+> A música torna-se progressivamente mais melódica. O ritmo praticamente desaparece. A respiração fica tranquila. A atenção percorre o corpo de baixo para cima: terra, água, fogo, ar, espaço. Sentir: pés, base, ventre, coração, garganta, terceiro olho, alto da cabeça.
+
+---
+
 ## v0.13 — 2026-09-04 · a voz do Vento
 
 Por decisão do autor, o movimento IV (O VENTO) ganha o seu conteúdo de voz:

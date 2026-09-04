@@ -11,7 +11,7 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 
 **Duração sugerida:** 2h15–2h30
 
-**Estrutura:** 7 etapas/movimentos
+**Estrutura:** 6 etapas/movimentos
 
 **Transições:** entre cada movimento e o seguinte, uma música de transição.
 
@@ -104,24 +104,7 @@ Depois de chegar a um ápice, começa a desaceleração.
 
 ---
 
-## VI — Novo relaxamento (não sei bem que nome dar aqui)
-### Do poder à presença
-
-**Estado:** integração, desaceleração
-**Elemento:** éter
-**Centro:** coração
-
-A percussão diminui. O corpo começa a desacelerar. Movimentos mais fluidos. Respiração mais longa e tranquila. Entram instrumentos metálicos: sinos, sons sustentados.
-
-"O que você percebe agora no seu corpo que não percebia no início?"
-
-A paisagem sonora deixa de ser terrestre e começa a tornar-se aérea. A voz também muda, evoluindo para mantras com vocalizações longas e sons sustentados.
-
-A música torna-se progressivamente mais melódica. O ritmo praticamente desaparece. A respiração fica tranquila. A atenção percorre o corpo de baixo para cima: terra, água, fogo, ar, espaço. Sentir: pés, base, ventre, coração, garganta, terceiro olho, alto da cabeça.
-
----
-
-## VII — O DESPERTAR
+## VI — O DESPERTAR
 ### A celebração da consciência
 
 **Estado:** integração, alegria, comunhão
@@ -129,3 +112,21 @@ A música torna-se progressivamente mais melódica. O ritmo praticamente desapar
 **Arquétipos:** Sol/ Estrela/ Mundo/ O Sábio
 
 Uma voz, o violão. A celebração.
+
+---
+
+## Nota — as pessoas no centro
+
+*Por que esta travessia passa pelo corpo e pela voz. Texto redigido pela partitura a pedido do autor (v0.14).*
+
+No sound healing mais comum, o centro da sala é dos instrumentos: tigelas, gongos, sinos. As pessoas deitam e recebem. Funciona — e é passivo. Esta travessia inverte o centro. Os instrumentos abrem a porta e sustentam o caminho, mas quem atravessa é o corpo e a voz de quem participa.
+
+O corpo entra primeiro. Na Floresta, o instinto; no Mar, a emoção, deitada, lavada pela água e pelo som. A voz entra depois, no Vento — sentados, em canto e resposta —, e é ela que leva ao Fogo e ao Despertar. A voz é ar com intenção: respiração que virou sentido. Por isso é a ponte entre o corpo e o que está acima dele.
+
+Quase toda tradição que trabalha com o sagrado chega a ele pela voz. O mantra védico parte da ideia de que o som precede a forma, e o OM é a vibração de origem; o zikr, o kirtan, o canto gregoriano e os pontos de umbanda são voz repetida em grupo. O centro da garganta é, nessas cosmologias, o da expressão e da verdade — e é por ele que a atenção sobe.
+
+Há também o que se mede. Vocalizar obriga a expiração longa, que acalma o sistema nervoso; cantar vibra a laringe e a faringe, inervadas pelo nervo vago, e o batimento se regulariza; quem canta junto sincroniza respiração e coração. Isso produz o estado que as pessoas descrevem como transcendência: calma alerta, fronteira do eu mais fina. A evidência é para esse estado. A tradição dá nome ao que o corpo produz.
+
+E há o que acontece entre as pessoas. A voz é o instrumento mais pessoal e o de que mais se tem vergonha; vocalizar em grupo é exposição e entrega. No canto e resposta, quem responde não autora a frase: recebe e devolve. O ego deixa de decidir o que dizer, e a voz simplesmente vem. Algo em mim que não é a minha vontade — é a isso que se chama eu superior.
+
+Por isso as pessoas ficam no centro. Não há travessia que se possa fazer por elas. O som abre; o corpo e a voz atravessam.
