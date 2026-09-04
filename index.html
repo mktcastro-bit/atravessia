@@ -79,6 +79,10 @@
   .tr{border-radius:8px;border:1px dashed var(--line-strong);background:rgba(255,255,255,.02);
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px 2px;text-align:center}
   .tr.hd{border-radius:11px 11px 4px 4px}
+  .tr.destaque,.tcell.tr.destaque{border:1px solid color-mix(in srgb,var(--c6) 70%,transparent);
+    background:linear-gradient(180deg,rgba(201,162,39,.16),rgba(201,162,39,.05))}
+  .tr.destaque .sym{opacity:1}
+  .tr.destaque .tl{color:#e6d39a}
   .tr .sym{font-family:Georgia,serif;font-size:18px;color:var(--c6);opacity:.85}
   .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
   .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
@@ -362,14 +366,14 @@ const ICONS = {
 const TRANS = [
   {de:"I",   para:"II",  tempo:5, som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
   {de:"II",  para:"III", tempo:5, som:["Música de transição – voz e violão"], icones:["voz","violao"]},
-  {de:"III", para:"IV",  tempo:8, som:[]},
+  {de:"III", para:"IV",  tempo:8, som:[], corpo:["A partir daqui, as pessoas passam a fazer parte da experiência sonora de maneira mais ativa."], destaque:true},
   {de:"IV",  para:"V",   tempo:5, som:[]},
   {de:"V",   para:"VI",  tempo:5, som:[]},
 ];
-const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
+const trHead = (tr) => `<div class="tr hd${tr.destaque?" destaque":""}"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"
-  ? `<div class="tr">${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
-  : `<div class="tr">${(tr.icones||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
+  ? `<div class="tr${tr.destaque?" destaque":""}">${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
+  : `<div class="tr${tr.destaque?" destaque":""}">${(tr.icones||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
 
 const LAYERS = [
   {key:"som",  label:"Paisagem<br>sonora"},
@@ -401,7 +405,7 @@ const totLabel = definidos.length
 html += `<div class="row tempo"><div class="stub"><b>Tempo</b><span class="tot">${totLabel}</span></div>`;
 PHASES.forEach((p,i)=>{
   html += `<div class="tcell" style="--c:${p.cor}">${fmtMin(p.tempo)}</div>`;
-  if (i < TRANS.length) html += `<div class="tcell tr">${fmtMin(TRANS[i].tempo)}</div>`;
+  if (i < TRANS.length) html += `<div class="tcell tr${TRANS[i].destaque?" destaque":""}">${fmtMin(TRANS[i].tempo)}</div>`;
 });
 html += `</div>`;
 
@@ -409,7 +413,7 @@ html += `<div class="row"><div class="stub"><b>Movimento</b></div>`;
 PHASES.forEach((p,i)=>{
   html += `<div class="ph" style="--c:${p.cor}" data-i="${i}">
     <div class="num">${p.id}</div><div class="nm">${p.nome}</div><div class="tt">${p.tag}</div></div>`;
-  if (i < TRANS.length) html += trHead();
+  if (i < TRANS.length) html += trHead(TRANS[i]);
 });
 html += `</div>`;
 

@@ -2,6 +2,16 @@
 
 ---
 
+## v0.18 — 2026-09-04 · a transição Mar → Vento é o ponto de virada
+
+Por decisão do autor, a transição entre O Mar (III) e O Vento (IV) marca o
+momento em que **as pessoas passam a fazer parte da experiência sonora de
+maneira mais ativa**. A frase entra no roteiro como bloco de transição do III,
+e na partitura essa coluna ganha **cor própria** — dourada — em todas as
+linhas, inclusive na de tempo, e traz a frase na linha *Corpo & movimento*.
+
+---
+
 ## v0.17 — 2026-09-04 · tempo das transições
 
 Por decisão do autor: **transições de 5 minutos**, exceto **Mar → Vento, de
