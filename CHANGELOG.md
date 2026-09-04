@@ -12,6 +12,9 @@ da nota "As pessoas no centro", já no projeto: *o som abre* → *o corpo e a vo
 atravessam*. A metade ativa recebe um tom quente sob todas as linhas. Tudo
 derivado da transição marcada como destaque; nenhuma alteração de texto.
 
+*Correção no mesmo dia:* a linha da faixa usava a mesma classe dos arcos e
+perdia o grid; renomeada.
+
 ---
 
 ## v0.20 — 2026-09-04 · ícone de sukhasana na virada

@@ -95,7 +95,7 @@
   .tr .vazio{color:#6d6559;font-style:italic;font-size:10px}
   .tr .ico{width:30px;height:30px;color:var(--c6);opacity:.9;flex:none}
   .tr .ico svg{width:100%;height:100%;display:block}
-  .row.fase{margin-bottom:8px}
+  .row.faixa{margin-bottom:8px}
   .fase{border-radius:9px;padding:9px 12px;font-family:Georgia,serif;font-style:italic;font-size:12.5px;
     letter-spacing:.04em;display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px}
   .fase.esq{background:rgba(63,111,143,.10);color:#a9c1d2;border:1px solid rgba(143,184,212,.18)}
@@ -427,7 +427,7 @@ const ativo = (i, isTrans) => VIRADA >= 0 && (isTrans ? i > VIRADA : i > VIRADA)
 let html = "";
 if (VIRADA >= 0) {
   const esq = 2*VIRADA + 1, dir = (2*PHASES.length - 1) - esq - 1;
-  html += `<div class="row fase"><div class="stub"><b>Participação</b></div>
+  html += `<div class="row faixa"><div class="stub"><b>Participação</b></div>
     <div class="fase esq" style="grid-column:span ${esq}"><span>o som abre</span><span class="arrow">→</span></div>
     <div class="fase hinge"><span class="ico">${ICONS.sukhasana}</span><span>a partir daqui</span></div>
     <div class="fase dir" style="grid-column:span ${dir}"><span class="arrow">→</span><span>o corpo e a voz atravessam</span></div>
