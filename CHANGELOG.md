@@ -2,6 +2,18 @@
 
 ---
 
+## v0.21 — 2026-09-04 · o layout reflete as duas fases
+
+A partitura passa a mostrar a forma que a vivência ganhou com a virada: uma
+**faixa de participação** acima da linha de tempo, com um arco sobre I–III, a
+dobradiça sobre a coluna Mar → Vento (sukhasana + "a partir daqui", palavras do
+bloco de transição do autor) e um arco sobre IV–VI. Os rótulos dos arcos vêm
+da nota "As pessoas no centro", já no projeto: *o som abre* → *o corpo e a voz
+atravessam*. A metade ativa recebe um tom quente sob todas as linhas. Tudo
+derivado da transição marcada como destaque; nenhuma alteração de texto.
+
+---
+
 ## v0.20 — 2026-09-04 · ícone de sukhasana na virada
 
 Por decisão do autor, a transição Mar → Vento ganha o ícone de uma pessoa

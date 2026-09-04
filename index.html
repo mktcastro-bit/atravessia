@@ -95,6 +95,19 @@
   .tr .vazio{color:#6d6559;font-style:italic;font-size:10px}
   .tr .ico{width:30px;height:30px;color:var(--c6);opacity:.9;flex:none}
   .tr .ico svg{width:100%;height:100%;display:block}
+  .row.fase{margin-bottom:8px}
+  .fase{border-radius:9px;padding:9px 12px;font-family:Georgia,serif;font-style:italic;font-size:12.5px;
+    letter-spacing:.04em;display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px}
+  .fase.esq{background:rgba(63,111,143,.10);color:#a9c1d2;border:1px solid rgba(143,184,212,.18)}
+  .fase.dir{background:linear-gradient(90deg,rgba(201,162,39,.16),rgba(201,162,39,.06));color:#e6d39a;border:1px solid rgba(201,162,39,.32)}
+  .fase.hinge{background:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.6);color:#f0e2b0;
+    flex-direction:column;gap:2px;font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:6px 4px}
+  .fase.hinge .ico{width:22px;height:22px;color:var(--c6)}
+  .fase.hinge .ico svg{width:100%;height:100%;display:block}
+  .fase .arrow{opacity:.55}
+  /* metade ativa: um tom quente sob todas as linhas, para a virada se ler de longe */
+  .ativa{background-color:rgba(201,162,39,.045)!important}
+  .ph.ativa{box-shadow:inset 0 2px 0 rgba(201,162,39,.35)}
   .row.tempo{margin-bottom:9px}
   .tcell{border-radius:8px;padding:7px 8px;text-align:center;font-size:12px;
     background:rgba(255,255,255,.03);border:1px solid var(--line);color:#cdc5b9;
@@ -384,10 +397,10 @@ const TRANS = [
   {de:"IV",  para:"V",   tempo:5, som:[]},
   {de:"V",   para:"VI",  tempo:5, som:[]},
 ];
-const trHead = (tr) => `<div class="tr hd${tr.destaque?" destaque":""}"><span class="sym">♪</span><span class="tl">transição</span></div>`;
-const trCell = (tr, key) => key !== "som"
-  ? `<div class="tr${tr.destaque?" destaque":""}">${key==="corpo" ? (tr.icones_corpo||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("") : ""}${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
-  : `<div class="tr${tr.destaque?" destaque":""}">${(tr.icones||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
+const trHead = (tr, extra="") => `<div class="tr hd${tr.destaque?" destaque":""}${extra}"><span class="sym">♪</span><span class="tl">transição</span></div>`;
+const trCell = (tr, key, extra="") => key !== "som"
+  ? `<div class="tr${tr.destaque?" destaque":""}${extra}">${key==="corpo" ? (tr.icones_corpo||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("") : ""}${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
+  : `<div class="tr${tr.destaque?" destaque":""}${extra}">${(tr.icones||[]).map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
 
 const LAYERS = [
   {key:"som",  label:"Paisagem<br>sonora"},
@@ -406,7 +419,20 @@ PHASES.forEach((p,i)=>{
 });
 board.style.setProperty('--cols', cols.join(' '));
 board.style.setProperty('--cols-m', colsM.join(' '));
+// A transição em destaque divide a vivência em duas fases. Os rótulos vêm da
+// nota "As pessoas no centro", já no projeto: "o som abre" / "o corpo e a voz
+// atravessam"; o "a partir daqui" é do próprio bloco de transição do autor.
+const VIRADA = TRANS.findIndex(x => x.destaque);
+const ativo = (i, isTrans) => VIRADA >= 0 && (isTrans ? i > VIRADA : i > VIRADA) ? " ativa" : "";
 let html = "";
+if (VIRADA >= 0) {
+  const esq = 2*VIRADA + 1, dir = (2*PHASES.length - 1) - esq - 1;
+  html += `<div class="row fase"><div class="stub"><b>Participação</b></div>
+    <div class="fase esq" style="grid-column:span ${esq}"><span>o som abre</span><span class="arrow">→</span></div>
+    <div class="fase hinge"><span class="ico">${ICONS.sukhasana}</span><span>a partir daqui</span></div>
+    <div class="fase dir" style="grid-column:span ${dir}"><span class="arrow">→</span><span>o corpo e a voz atravessam</span></div>
+  </div>`;
+}
 
 // Linha de tempo. Os tempos por movimento e por transição ainda não constam do
 // roteiro (a divisão da v0.1 foi retirada na v0.2 por não ser texto do autor);
@@ -427,16 +453,16 @@ const totLabel = definidos.length
   : `roteiro: ${TOTAL_ROTEIRO}`;
 html += `<div class="row tempo"><div class="stub"><b>Tempo</b><span class="tot">${totLabel}</span></div>`;
 PHASES.forEach((p,i)=>{
-  html += `<div class="tcell" style="--c:${p.cor}">${fmtMin(p.tempo)}</div>`;
-  if (i < TRANS.length) html += `<div class="tcell tr${TRANS[i].destaque?" destaque":""}">${fmtMin(TRANS[i].tempo)}</div>`;
+  html += `<div class="tcell${ativo(i,false)}" style="--c:${p.cor}">${fmtMin(p.tempo)}</div>`;
+  if (i < TRANS.length) html += `<div class="tcell tr${TRANS[i].destaque?" destaque":""}${ativo(i,true)}">${fmtMin(TRANS[i].tempo)}</div>`;
 });
 html += `</div>`;
 
 html += `<div class="row"><div class="stub"><b>Movimento</b></div>`;
 PHASES.forEach((p,i)=>{
-  html += `<div class="ph" style="--c:${p.cor}" data-i="${i}">
+  html += `<div class="ph${ativo(i,false)}" style="--c:${p.cor}" data-i="${i}">
     <div class="num">${p.id}</div><div class="nm">${p.nome}</div><div class="tt">${p.tag}</div></div>`;
-  if (i < TRANS.length) html += trHead(TRANS[i]);
+  if (i < TRANS.length) html += trHead(TRANS[i], ativo(i,true));
 });
 html += `</div>`;
 
@@ -447,8 +473,8 @@ LAYERS.forEach(L=>{
     const body = its.length
       ? `<ul>${its.map(x=>`<li>${x.replace(/<q>(.*?)<\/q>/g,'<span class="q">$1</span>')}</li>`).join("")}</ul>`
       : `<span class="vazio">não especificado no roteiro</span>`;
-    html += `<div class="cell" style="--c:${p.cor}">${body}</div>`;
-    if (i < TRANS.length) html += trCell(TRANS[i], L.key);
+    html += `<div class="cell${ativo(i,false)}" style="--c:${p.cor}">${body}</div>`;
+    if (i < TRANS.length) html += trCell(TRANS[i], L.key, ativo(i,true));
   });
   html += `</div>`;
 });
