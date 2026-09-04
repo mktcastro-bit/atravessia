@@ -84,6 +84,8 @@
   .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
   .tr .it{font-size:11px;color:#cdc5b9}
   .tr .vazio{color:#6d6559;font-style:italic;font-size:10px}
+  .tr .ico{width:20px;height:20px;color:var(--c6);opacity:.9;flex:none}
+  .tr .ico svg{width:100%;height:100%;display:block}
   .row.hidden{display:none}
 
   .panel{margin-top:26px;border-radius:14px;border:1px solid var(--line-strong);
@@ -322,8 +324,25 @@ const PHASES = [
 // Transições entre movimentos. Por decisão do autor (04/09/2026), há sempre
 // uma música de transição entre um movimento e o seguinte. Só a primeira está
 // especificada no roteiro; as demais ficam marcadas como não especificadas.
+// Ícones das transições — SVG embutido, traço fino, cor herdada (currentColor).
+// "voz" já está definido para uso futuro; só aparece quando uma transição o indicar.
+const ICONS = {
+  violao: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.2 21.5c-2.6 0-4.7-2-4.7-4.5 0-1.6.8-2.6 1.6-3.4.6-.6.9-1.2.9-2 0-2 1.6-3.5 3.6-3.5s3.6 1.5 3.6 3.5c0 .8.3 1.4.9 2 .8.8 1.6 1.8 1.6 3.4 0 2.5-2.1 4.5-4.7 4.5z"/>
+    <circle cx="9.9" cy="16.2" r="1.7"/>
+    <path d="M12.6 10.2 20.2 2.6"/>
+    <path d="m18.4 1.9 3.7 3.7"/>
+    <path d="m19.5 3 1.2-1.2M20.8 4.3 22 3.1"/>
+  </svg>`,
+  voz: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="3" width="6" height="11" rx="3"/>
+    <path d="M6 11a6 6 0 0 0 12 0"/>
+    <path d="M12 17v4M9 21h6"/>
+  </svg>`
+};
+
 const TRANS = [
-  {de:"I",   para:"II",  som:["Música de transição – violão"]},
+  {de:"I",   para:"II",  som:["Música de transição – violão"], icone:"violao"},
   {de:"II",  para:"III", som:[]},
   {de:"III", para:"IV",  som:[]},
   {de:"IV",  para:"V",   som:[]},
@@ -332,7 +351,7 @@ const TRANS = [
 const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"
   ? `<div class="tr"></div>`
-  : `<div class="tr">${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
+  : `<div class="tr">${tr.icone && ICONS[tr.icone] ? `<span class="ico">${ICONS[tr.icone]}</span>` : ""}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
 
 const LAYERS = [
   {key:"som",  label:"Paisagem<br>sonora"},

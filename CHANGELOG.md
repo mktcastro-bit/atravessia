@@ -2,6 +2,16 @@
 
 ---
 
+## v0.5 — 2026-09-04 · ícone na transição
+
+Ícone de violão ao lado de "Música de transição – violão", na coluna de
+transição I→II. SVG de traço embutido, na cor dos símbolos da grade.
+
+Um ícone de voz fica definido no código para uso futuro, sem aparecer em lugar
+nenhum até uma transição o indicar. Nenhuma alteração de texto.
+
+---
+
 ## v0.4 — 2026-09-04 · transições como elemento do esquema
 
 Por decisão do autor, há sempre uma música de transição entre um movimento e o
