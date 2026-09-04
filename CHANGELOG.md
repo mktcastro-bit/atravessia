@@ -2,6 +2,23 @@
 
 ---
 
+## v0.3 — 2026-09-04 · música de transição entre I e II
+
+Acrescentado, por decisão do autor, entre o fim da Introdução/Abertura (I) e o
+início de A Floresta (II):
+
+- **Música de transição – violão.**
+
+No `roteiro.md` entra como bloco próprio após a transição do movimento I.
+Na partitura visual entra na camada *Paisagem sonora* do movimento I e no seu
+texto integral, logo após o parágrafo da transição — a grade continua com seis
+colunas.
+
+Também nesta versão: o repositório passa a ser a fonte única (a cópia no iCloud
+é espelho, atualizada a cada commit).
+
+---
+
 ## v0.2 — 2026-08-12 · retorno ao roteiro original
 
 Removido todo acréscimo editorial que não constava do roteiro. A partitura visual
