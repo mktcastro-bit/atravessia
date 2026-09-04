@@ -79,13 +79,14 @@ Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e 
 ---
 
 ## IV — O VENTO
-### O despertar da voz
+### O despertar do eu superior por meio da voz
 
 **Elemento:** ar
+**Voz:** vocalizações de mantras — canto e resposta entre o condutor e os participantes
 
-Sentados. Começam as vocalizações com os participantes: mantra.
+Sentados. Começam as vocalizações de mantras, em canto e resposta com o condutor, para despertar o eu superior por meio da voz.
 
-*(Nome, subtítulo e elemento propostos a pedido do autor. Estado, centro, arquétipo e paisagem sonora ainda não especificados.)*
+*(Nome e elemento propostos a pedido do autor. Estado, centro, arquétipo e paisagem sonora ainda não especificados.)*
 
 ---
 

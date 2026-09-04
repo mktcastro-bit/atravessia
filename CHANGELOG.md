@@ -2,6 +2,17 @@
 
 ---
 
+## v0.13 — 2026-09-04 · a voz do Vento
+
+Por decisão do autor, o movimento IV (O VENTO) ganha o seu conteúdo de voz:
+**vocalizações de mantras, em canto e resposta entre o condutor e os
+participantes, para despertar o eu superior por meio da voz.** O subtítulo
+proposto na v0.12 ("O despertar da voz") é substituído pela intenção nas
+palavras do autor: **"O despertar do eu superior por meio da voz"**. Nome e
+elemento (ar) continuam sendo proposta da partitura.
+
+---
+
 ## v0.12 — 2026-09-04 · sétima estação: O VENTO
 
 Por decisão do autor, entra **mais uma estação, entre O Mar e O Fogo**: nela
