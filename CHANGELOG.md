@@ -17,6 +17,9 @@ alto da cabeça — que só existia neste movimento.
 travessia passa pelo corpo e pela voz — no fim do `roteiro.md` e no rodapé da
 partitura. Texto redigido pela partitura; marcado como tal.
 
+*Correção no mesmo dia:* a seção da nota havia sido inserida dentro do contêiner
+de rolagem do quadro; passou a ficar depois dele, dentro da página.
+
 **Texto integral do movimento que saiu:**
 
 > ## VI — Novo relaxamento (não sei bem que nome dar aqui)
