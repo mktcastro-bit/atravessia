@@ -2,6 +2,45 @@
 
 ---
 
+## v0.8 — 2026-09-04 · o movimento III passa a ser O MAR
+
+Por decisão do autor, o movimento III é **trocado inteiro**: sai O Batalhão (o
+despertar do guerreiro) e entra **O MAR**, com paisagem sonora **oceano, trovão
+e ondas**. Arquétipo, estado, elemento, corpo e voz ainda não foram definidos e
+ficam marcados como não especificados — em estudo: um arquétipo ligado às
+emoções (A Lua, ou A Torre para o trovão).
+
+**Três pontos do roteiro passam a apontar para algo que não existe mais, e
+ficaram como estavam, à espera de decisão do autor:**
+
+- o *princípio dramatúrgico* do cabeçalho ainda diz "→ reunir a força →";
+- a lista de *arquétipos que podem ser ativados* ainda inclui O Guerreiro;
+- o movimento II ainda termina em "para depois evoluir para o corpo do guerreiro".
+
+**Texto integral do III que saiu, para não se perder:**
+
+> ## III — O BATALHÃO
+> ### O despertar do guerreiro
+>
+> **Estado:** força, presença, poder coletivo
+> **Elemento:** terra/ fogo
+> **Arquétipo:** guerreiro
+> **Referências simbólicas:** Ogum, guerreiros da floresta, pulsação do coração, marcha, inspiração na dança de guerra dos Maoris e xamânicos. Caboclos e africanos.
+>
+> Os movimentos começam a adquirir organização.
+>
+> A imagem do guerreiro pode ser explorada através de peso dos pés, da verticalidade, marcha, pulsação, peito, olhar, voz, sincronização coletiva, proteção, enfrentamento, limite, coragem.
+>
+> O ritmo cresce. O grupo começa a caminhar em conjunto. Forma-se uma roda e inicia-se uma pulsação coletiva, com coreografia e voz.
+>
+> Entram sonorizações e cantos (inspirados na Taketina) criados especificamente para a experiência.
+>
+> > **Obs.:** No Batalhão, o centro seria: eu encontro minha força no corpo e no coletivo. No Fogo, seria: eu atravesso o limite da minha própria força e me transformo. Assim, o Batalhão é mobilização e o Fogo é transmutação.
+>
+> *(Até aqui, o participante percebeu, despertou, encontrou o instinto, encontrou a força, entrou no coletivo. Agora, o fogo vai transmutar. Funciona meio como um mago, um alquimista.)*
+
+---
+
 ## v0.7 — 2026-09-04 · a transição do movimento I é o momento do violão
 
 Por decisão do autor, a transição do movimento I passa a ser o momento do

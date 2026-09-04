@@ -66,25 +66,11 @@ A música vai ganhando em intensidade, com percussões, batidas. Os movimentos s
 
 ---
 
-## III — O BATALHÃO
-### O despertar do guerreiro
+## III — O MAR
 
-**Estado:** força, presença, poder coletivo
-**Elemento:** terra/ fogo
-**Arquétipo:** guerreiro
-**Referências simbólicas:** Ogum, guerreiros da floresta, pulsação do coração, marcha, inspiração na dança de guerra dos Maoris e xamânicos. Caboclos e africanos.
+**Paisagem sonora:** oceano, trovão e ondas
 
-Os movimentos começam a adquirir organização.
-
-A imagem do guerreiro pode ser explorada através de peso dos pés, da verticalidade, marcha, pulsação, peito, olhar, voz, sincronização coletiva, proteção, enfrentamento, limite, coragem.
-
-O ritmo cresce. O grupo começa a caminhar em conjunto. Forma-se uma roda e inicia-se uma pulsação coletiva, com coreografia e voz.
-
-Entram sonorizações e cantos (inspirados na Taketina) criados especificamente para a experiência.
-
-> **Obs.:** No Batalhão, o centro seria: eu encontro minha força no corpo e no coletivo. No Fogo, seria: eu atravesso o limite da minha própria força e me transformo. Assim, o Batalhão é mobilização e o Fogo é transmutação.
-
-*(Até aqui, o participante percebeu, despertou, encontrou o instinto, encontrou a força, entrou no coletivo. Agora, o fogo vai transmutar. Funciona meio como um mago, um alquimista.)*
+*(Demais camadas — estado, elemento, arquétipo, corpo, voz — ainda não especificadas.)*
 
 ---
 
