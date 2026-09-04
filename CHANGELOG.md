@@ -2,6 +2,16 @@
 
 ---
 
+## v0.19 — 2026-09-04 · a coluna de virada fica larga
+
+A transição em destaque (Mar → Vento) passa a ter **coluna larga** — 150 px
+contra 54 das outras — e o texto dentro dela corre na **horizontal**, legível.
+A grade da partitura passa a ser calculada a partir dos dados, então o
+destaque de qualquer transição futura já vem com a largura. Nenhuma alteração
+de texto.
+
+---
+
 ## v0.18 — 2026-09-04 · a transição Mar → Vento é o ponto de virada
 
 Por decisão do autor, a transição entre O Mar (III) e O Vento (IV) marca o

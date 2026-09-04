@@ -51,8 +51,8 @@
   .tg.on{background:rgba(240,235,226,.93);color:#12111a;border-color:transparent;font-weight:600}
 
   .scroller{overflow-x:auto;padding-bottom:8px}
-  .board{min-width:1300px}
-  .row{display:grid;grid-template-columns:170px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr;gap:5px;margin-bottom:5px}
+  .board{min-width:1400px}
+  .row{display:grid;grid-template-columns:var(--cols);gap:5px;margin-bottom:5px}
   .stub{position:sticky;left:0;z-index:5;background:var(--bg);
     font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);
     display:flex;align-items:center;padding:10px 12px 10px 0;border-right:1px solid var(--line)}
@@ -83,6 +83,10 @@
     background:linear-gradient(180deg,rgba(201,162,39,.16),rgba(201,162,39,.05))}
   .tr.destaque .sym{opacity:1}
   .tr.destaque .tl{color:#e6d39a}
+  .tr.destaque .tl,.tr.destaque .it,.tr.destaque .vazio{writing-mode:horizontal-tb;transform:none}
+  .tr.destaque{padding:10px 11px;align-items:flex-start;justify-content:flex-start;text-align:left;gap:8px}
+  .tr.hd.destaque{align-items:center;justify-content:center;text-align:center}
+  .tr.destaque .it{font-size:12px;line-height:1.45;color:#e2d9cb}
   .tr .sym{font-family:Georgia,serif;font-size:18px;color:var(--c6);opacity:.85}
   .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
   .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
@@ -164,7 +168,7 @@
   @media(max-width:760px){
     .wrap{padding:26px 14px 70px}
     .stub{display:none}
-    .row{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr}
+    .row{grid-template-columns:var(--cols-m)}
   }
 </style>
 </head>
@@ -383,6 +387,15 @@ const LAYERS = [
 ];
 
 const board = document.getElementById('board');
+// Colunas da grade a partir dos dados: movimento = 1fr; transição = estreita,
+// exceto a em destaque, que fica larga para o texto correr na horizontal.
+const cols  = ['170px'], colsM = [];
+PHASES.forEach((p,i)=>{
+  cols.push('1fr'); colsM.push('1fr');
+  if (i < TRANS.length) { const w = TRANS[i].destaque; cols.push(w ? '150px' : '54px'); colsM.push(w ? '120px' : '34px'); }
+});
+board.style.setProperty('--cols', cols.join(' '));
+board.style.setProperty('--cols-m', colsM.join(' '));
 let html = "";
 
 // Linha de tempo. Os tempos por movimento e por transição ainda não constam do
