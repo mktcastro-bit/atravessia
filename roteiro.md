@@ -13,6 +13,8 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 
 **Estrutura:** 6 etapas/movimentos
 
+**Transições:** entre cada movimento e o seguinte, uma música de transição.
+
 **Princípio dramatúrgico:** tomar consciência do corpo → despertar o instinto → reunir a força → atravessar o fogo → aquietar → ascender → encontrar a sabedoria → celebrar e retornar.
 
 **Arquétipos que podem ser ativados:** O Louco, O Guerreiro, O Mago, O Sol, O sábio, O Mundo.

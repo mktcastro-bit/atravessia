@@ -2,6 +2,24 @@
 
 ---
 
+## v0.4 — 2026-09-04 · transições como elemento do esquema
+
+Por decisão do autor, há sempre uma música de transição entre um movimento e o
+seguinte. A regra entra no cabeçalho do `roteiro.md` ("Transições: entre cada
+movimento e o seguinte, uma música de transição").
+
+Na partitura visual, as transições deixam de estar dentro do movimento I e
+ganham **cinco colunas estreitas próprias**, entre os seis movimentos. Só a
+transição I→II está especificada ("Música de transição – violão"); as outras
+quatro aparecem como *não especificado no roteiro*, na linha de paisagem
+sonora. Nas demais camadas a coluna de transição fica vazia, sem texto — a
+transição é, por definição do autor, musical.
+
+Removida a duplicata da v0.3 que colocava a música de transição dentro da
+paisagem sonora e do texto integral do movimento I.
+
+---
+
 ## v0.3 — 2026-09-04 · música de transição entre I e II
 
 Acrescentado, por decisão do autor, entre o fim da Introdução/Abertura (I) e o

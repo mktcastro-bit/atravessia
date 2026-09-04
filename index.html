@@ -51,8 +51,8 @@
   .tg.on{background:rgba(240,235,226,.93);color:#12111a;border-color:transparent;font-weight:600}
 
   .scroller{overflow-x:auto;padding-bottom:8px}
-  .board{min-width:1080px}
-  .row{display:grid;grid-template-columns:170px repeat(6,1fr);gap:5px;margin-bottom:5px}
+  .board{min-width:1300px}
+  .row{display:grid;grid-template-columns:170px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr;gap:5px;margin-bottom:5px}
   .stub{position:sticky;left:0;z-index:5;background:var(--bg);
     font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);
     display:flex;align-items:center;padding:10px 12px 10px 0;border-right:1px solid var(--line)}
@@ -76,6 +76,14 @@
     background:color-mix(in srgb,var(--c) 85%,white)}
   .cell .q{font-family:Georgia,serif;font-style:italic;color:#e6ddcf;display:block}
   .cell .vazio{color:#6d6559;font-style:italic;font-size:11.5px}
+  .tr{border-radius:8px;border:1px dashed var(--line-strong);background:rgba(255,255,255,.02);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px 2px;text-align:center}
+  .tr.hd{border-radius:11px 11px 4px 4px}
+  .tr .sym{font-family:Georgia,serif;font-size:15px;color:var(--c6);opacity:.85}
+  .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
+  .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
+  .tr .it{font-size:11px;color:#cdc5b9}
+  .tr .vazio{color:#6d6559;font-style:italic;font-size:10px}
   .row.hidden{display:none}
 
   .panel{margin-top:26px;border-radius:14px;border:1px solid var(--line-strong);
@@ -137,7 +145,7 @@
   @media(max-width:760px){
     .wrap{padding:26px 14px 70px}
     .stub{display:none}
-    .row{grid-template-columns:repeat(6,1fr)}
+    .row{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr}
   }
 </style>
 </head>
@@ -237,7 +245,7 @@ const PHASES = [
   id:"I", nome:"INTRODUÇÃO / ABERTURA", tag:"Percepção e consciência corporal", cor:"var(--c1)",
   estado:"repouso, receptividade, interiorização",
   elemento:"espaço / água", centro:"corpo inteiro", arquetipo:"",
-  som:["sound healing","sons longos","harmônicos","tigelas","gongos muito suaves","Silêncio","Música de transição – violão"],
+  som:["sound healing","sons longos","harmônicos","tigelas","gongos muito suaves","Silêncio"],
   corpo:["Os participantes entram e deitam-se","Varredura corporal, lentamente: pés, pernas, quadril, abdômen, peito, ombros, braços, mãos, pescoço, rosto, couro cabeludo, orelhas","Perceber sensações, temperatura, peso, tensão, pulsação","Trabalho com respiração mais consciente","<i>Transição:</i> espreguiçar, pequenos movimentos, suspiros, bocejos, levantar, alongamentos","Movimentos espontâneos que o corpo pede: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar"],
   voz:["<q>Perceba o ar entrando.</q>","<q>Perceba o ar saindo.</q>","<q>Não faça nada.</q>","<q>Você não precisa chegar a lugar algum.</q>","<q>Existe alguma emoção presente? Não procure um nome. Perceba apenas onde ela vive no corpo.</q>"],
   simb:["Estado: repouso, receptividade, interiorização","Elemento: espaço / água","Centro: corpo inteiro"],
@@ -246,8 +254,7 @@ const PHASES = [
   <p>A proposta é perceber sensações, temperatura, peso, tensão, pulsação. Trabalho com respiração mais consciente.</p>
   <p>Depois, a atenção se volta aos sentimentos: <em>"Existe alguma emoção presente? Não procure um nome. Perceba apenas onde ela vive no corpo."</em></p>
   <p>Silêncio. Sound healing. A percepção começa a se ampliar.</p>
-  <p><em>Transição.</em> Os participantes são convidados a começar a se espreguiçar e a produzir pequenos movimentos, suspiros, bocejos. Em seguida, vão se levantando, com alongamentos. Depois, movimentos espontâneos que o corpo pede. Podem surgir: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar. Começam a entrar os sons da floresta e os participantes são convidados a perceberem esses sons.</p>
-  <p><em>Música de transição</em> – violão.</p>`
+  <p><em>Transição.</em> Os participantes são convidados a começar a se espreguiçar e a produzir pequenos movimentos, suspiros, bocejos. Em seguida, vão se levantando, com alongamentos. Depois, movimentos espontâneos que o corpo pede. Podem surgir: tremer, rastejar, rolar, agachar, expandir, contrair, sacudir, saltar, girar. Começam a entrar os sons da floresta e os participantes são convidados a perceberem esses sons.</p>`
 },
 {
   id:"II", nome:"A FLORESTA", tag:"O despertar do animal", cor:"var(--c2)",
@@ -312,6 +319,21 @@ const PHASES = [
 }
 ];
 
+// Transições entre movimentos. Por decisão do autor (04/09/2026), há sempre
+// uma música de transição entre um movimento e o seguinte. Só a primeira está
+// especificada no roteiro; as demais ficam marcadas como não especificadas.
+const TRANS = [
+  {de:"I",   para:"II",  som:["Música de transição – violão"]},
+  {de:"II",  para:"III", som:[]},
+  {de:"III", para:"IV",  som:[]},
+  {de:"IV",  para:"V",   som:[]},
+  {de:"V",   para:"VI",  som:[]},
+];
+const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
+const trCell = (tr, key) => key !== "som"
+  ? `<div class="tr"></div>`
+  : `<div class="tr">${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
+
 const LAYERS = [
   {key:"som",  label:"Paisagem<br>sonora"},
   {key:"corpo",label:"Corpo<br>& movimento"},
@@ -326,17 +348,19 @@ html += `<div class="row"><div class="stub"><b>Movimento</b></div>`;
 PHASES.forEach((p,i)=>{
   html += `<div class="ph" style="--c:${p.cor}" data-i="${i}">
     <div class="num">${p.id}</div><div class="nm">${p.nome}</div><div class="tt">${p.tag}</div></div>`;
+  if (i < TRANS.length) html += trHead();
 });
 html += `</div>`;
 
 LAYERS.forEach(L=>{
   html += `<div class="row" data-row="${L.key}"><div class="stub"><b>${L.label}</b></div>`;
-  PHASES.forEach(p=>{
+  PHASES.forEach((p,i)=>{
     const its = p[L.key];
     const body = its.length
       ? `<ul>${its.map(x=>`<li>${x.replace(/<q>(.*?)<\/q>/g,'<span class="q">$1</span>')}</li>`).join("")}</ul>`
       : `<span class="vazio">não especificado no roteiro</span>`;
     html += `<div class="cell" style="--c:${p.cor}">${body}</div>`;
+    if (i < TRANS.length) html += trCell(TRANS[i], L.key);
   });
   html += `</div>`;
 });
