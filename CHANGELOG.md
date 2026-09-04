@@ -2,6 +2,28 @@
 
 ---
 
+## v0.12 — 2026-09-04 · sétima estação: O VENTO
+
+Por decisão do autor, entra **mais uma estação, entre O Mar e O Fogo**: nela
+começam as vocalizações com os participantes, sentados, fazendo mantra. A
+vivência passa a ter **7 movimentos e 6 transições**; Fogo, o "Novo
+relaxamento" e O Despertar viram V, VI e VII.
+
+**O nome, o subtítulo e o elemento foram criados pela partitura a pedido
+expresso do autor**, a partir da cosmologia das estações (Floresta = terra,
+Mar = água, Fogo = fogo, VI = éter, Despertar = luz — faltava o ar, e voz é ar):
+**O VENTO — O despertar da voz**, elemento **ar**. Alternativas cogitadas: A
+Montanha, O Sopro. Trocar é uma linha em cada arquivo.
+
+Conteúdo do IV, só o que o autor disse: *Sentados. Começam as vocalizações com
+os participantes: mantra.* Estado, centro, arquétipo e paisagem sonora ficam
+não especificados. A posição antes do Fogo segue a progressão do corpo —
+deitado (Mar) → sentado (Vento) → em pé (Fogo); mover é possível.
+
+Também nesta versão: ícones das transições maiores (30 px).
+
+---
+
 ## v0.11 — 2026-09-04 · linha de tempo
 
 Nova linha **Tempo** acima dos movimentos na partitura, com uma célula por

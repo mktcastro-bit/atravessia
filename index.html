@@ -8,7 +8,7 @@
   :root{
     --bg:#0c0b11; --ink:#f0ebe2; --ink-dim:#a49c92;
     --line:rgba(240,235,226,.10); --line-strong:rgba(240,235,226,.22);
-    --c1:#3f6f8f; --c2:#4e7a45; --c3:#a86a2e; --c4:#c2452d; --c5:#6f5f9e; --c6:#c9a227;
+    --c1:#3f6f8f; --c2:#4e7a45; --c3:#a86a2e; --c4:#c2452d; --c5:#6f5f9e; --c6:#c9a227; --c7:#5b8a8f;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -51,8 +51,8 @@
   .tg.on{background:rgba(240,235,226,.93);color:#12111a;border-color:transparent;font-weight:600}
 
   .scroller{overflow-x:auto;padding-bottom:8px}
-  .board{min-width:1300px}
-  .row{display:grid;grid-template-columns:170px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr;gap:5px;margin-bottom:5px}
+  .board{min-width:1480px}
+  .row{display:grid;grid-template-columns:170px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr;gap:5px;margin-bottom:5px}
   .stub{position:sticky;left:0;z-index:5;background:var(--bg);
     font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);
     display:flex;align-items:center;padding:10px 12px 10px 0;border-right:1px solid var(--line)}
@@ -79,12 +79,12 @@
   .tr{border-radius:8px;border:1px dashed var(--line-strong);background:rgba(255,255,255,.02);
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px 2px;text-align:center}
   .tr.hd{border-radius:11px 11px 4px 4px}
-  .tr .sym{font-family:Georgia,serif;font-size:15px;color:var(--c6);opacity:.85}
+  .tr .sym{font-family:Georgia,serif;font-size:18px;color:var(--c6);opacity:.85}
   .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
   .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
   .tr .it{font-size:11px;color:#cdc5b9}
   .tr .vazio{color:#6d6559;font-style:italic;font-size:10px}
-  .tr .ico{width:20px;height:20px;color:var(--c6);opacity:.9;flex:none}
+  .tr .ico{width:30px;height:30px;color:var(--c6);opacity:.9;flex:none}
   .tr .ico svg{width:100%;height:100%;display:block}
   .row.tempo{margin-bottom:9px}
   .tcell{border-radius:8px;padding:7px 8px;text-align:center;font-size:12px;
@@ -155,7 +155,7 @@
   @media(max-width:760px){
     .wrap{padding:26px 14px 70px}
     .stub{display:none}
-    .row{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr}
+    .row{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr}
   }
 </style>
 </head>
@@ -184,7 +184,7 @@
   <div class="subq">(Como poderíamos chamar essa vivência?)</div>
   <div class="meta">
     <span class="chip">Duração sugerida: 2h15–2h30</span>
-    <span class="chip">6 etapas/movimentos</span>
+    <span class="chip">7 etapas/movimentos</span>
     <span class="chip">som · corpo · respiração · movimento · voz · imaginação · símbolo</span>
     <span class="chip">O Louco · O Guerreiro · O Mago · O Sol · O sábio · O Mundo</span>
   </div>
@@ -289,7 +289,18 @@ const PHASES = [
   <p><em>Demais camadas — estado, centro, voz — ainda não especificadas no roteiro.</em></p>`
 },
 {
-  id:"IV", tempo:null, nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
+  id:"IV", tempo:null, nome:"O VENTO", tag:"O despertar da voz", cor:"var(--c7)",
+  estado:"", elemento:"ar", centro:"", arquetipo:"",
+  som:[],
+  corpo:["Sentados"],
+  voz:["Começam as vocalizações com os participantes: mantra"],
+  simb:["Elemento: ar"],
+  texto:`<p><b>Elemento:</b> ar.</p>
+  <p>Sentados. Começam as vocalizações com os participantes: mantra.</p>
+  <p><em>Nome, subtítulo e elemento propostos pela partitura a pedido do autor (v0.12). Estado, centro, arquétipo e paisagem sonora ainda não especificados no roteiro.</em></p>`
+},
+{
+  id:"V", tempo:null, nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
   estado:"intensidade, coragem, expressão, transmutação",
   elemento:"fogo", centro:"plexo solar", arquetipo:"o Mago",
   som:["A percussão cresce","Aumenta a vibração","Polirritmia"],
@@ -301,7 +312,7 @@ const PHASES = [
   <p>Depois de chegar a um ápice, começa a desaceleração.</p>`
 },
 {
-  id:"V", tempo:null, nome:"Novo relaxamento", tag:"Do poder à presença · (não sei bem que nome dar aqui)", cor:"var(--c5)",
+  id:"VI", tempo:null, nome:"Novo relaxamento", tag:"Do poder à presença · (não sei bem que nome dar aqui)", cor:"var(--c5)",
   estado:"integração, desaceleração",
   elemento:"éter", centro:"coração", arquetipo:"",
   som:["A percussão diminui","Entram instrumentos metálicos: sinos, sons sustentados","A paisagem sonora deixa de ser terrestre e começa a tornar-se aérea","A música torna-se progressivamente mais melódica","O ritmo praticamente desaparece"],
@@ -314,7 +325,7 @@ const PHASES = [
   <p>A música torna-se progressivamente mais melódica. O ritmo praticamente desaparece. A respiração fica tranquila. A atenção percorre o corpo de baixo para cima: terra, água, fogo, ar, espaço. Sentir: pés, base, ventre, coração, garganta, terceiro olho, alto da cabeça.</p>`
 },
 {
-  id:"VI", tempo:null, nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
+  id:"VII", tempo:null, nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
   estado:"integração, alegria, comunhão",
   elemento:"luz", centro:"", arquetipo:"Sol / Estrela / Mundo / O Sábio",
   som:["Uma voz, o violão"],
@@ -350,6 +361,7 @@ const TRANS = [
   {de:"III", para:"IV",  tempo:null, som:[]},
   {de:"IV",  para:"V",   tempo:null, som:[]},
   {de:"V",   para:"VI",  tempo:null, som:[]},
+  {de:"VI",  para:"VII", tempo:null, som:[]},
 ];
 const trHead = () => `<div class="tr hd"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key) => key !== "som"

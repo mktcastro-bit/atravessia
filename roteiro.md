@@ -11,7 +11,7 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 
 **Duração sugerida:** 2h15–2h30
 
-**Estrutura:** 6 etapas/movimentos
+**Estrutura:** 7 etapas/movimentos
 
 **Transições:** entre cada movimento e o seguinte, uma música de transição.
 
@@ -78,7 +78,18 @@ Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e 
 
 ---
 
-## IV — O FOGO (e o Mago): Poder e transformação
+## IV — O VENTO
+### O despertar da voz
+
+**Elemento:** ar
+
+Sentados. Começam as vocalizações com os participantes: mantra.
+
+*(Nome, subtítulo e elemento propostos a pedido do autor. Estado, centro, arquétipo e paisagem sonora ainda não especificados.)*
+
+---
+
+## V — O FOGO (e o Mago): Poder e transformação
 
 **Estado:** intensidade, coragem, expressão, transmutação
 **Elemento:** fogo
@@ -92,7 +103,7 @@ Depois de chegar a um ápice, começa a desaceleração.
 
 ---
 
-## V — Novo relaxamento (não sei bem que nome dar aqui)
+## VI — Novo relaxamento (não sei bem que nome dar aqui)
 ### Do poder à presença
 
 **Estado:** integração, desaceleração
@@ -109,7 +120,7 @@ A música torna-se progressivamente mais melódica. O ritmo praticamente desapar
 
 ---
 
-## VI — O DESPERTAR
+## VII — O DESPERTAR
 ### A celebração da consciência
 
 **Estado:** integração, alegria, comunhão
