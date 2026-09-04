@@ -2,6 +2,22 @@
 
 ---
 
+## v0.10 — 2026-09-04 · corpo e elemento do Mar
+
+Por decisão do autor, o movimento III (O MAR) ganha elemento **água** e o corpo
+e movimento — redigido a partir das palavras dele, com autorização expressa
+para melhorar a redação:
+
+> Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e transmutadas pelo poder do som e por essa conexão com as emoções profundas — como se a água as limpasse.
+
+Entra no roteiro e na camada *Corpo & movimento* da partitura. Estado, centro e
+voz seguem não especificados.
+
+A transição II→III (voz e violão, com os dois ícones) já estava em vigor desde
+a v0.6 — nada a alterar.
+
+---
+
 ## v0.9 — 2026-09-04 · arquétipo do Mar: O Sábio
 
 Por decisão do autor, o arquétipo do movimento III (O MAR) é **O Sábio**.

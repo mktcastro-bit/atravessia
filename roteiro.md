@@ -68,10 +68,13 @@ A música vai ganhando em intensidade, com percussões, batidas. Os movimentos s
 
 ## III — O MAR
 
+**Elemento:** água
 **Arquétipo:** O Sábio
 **Paisagem sonora:** oceano, trovão e ondas
 
-*(Demais camadas — estado, elemento, corpo, voz — ainda não especificadas.)*
+Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e transmutadas pelo poder do som e por essa conexão com as emoções profundas — como se a água as limpasse.
+
+*(Demais camadas — estado, centro, voz — ainda não especificadas.)*
 
 ---
 
