@@ -1,30 +1,41 @@
 # Registro de versões
 
-Anotar aqui o que muda a cada iteração — principalmente depois de cada teste com grupo.
-Formato sugerido: o que mudou, por quê, e o que se observou na prática.
+---
+
+## v0.2 — 2026-08-12 · retorno ao roteiro original
+
+Removido todo acréscimo editorial que não constava do roteiro. A partitura visual
+passa a conter exclusivamente o texto original.
+
+Retirado:
+
+- Divisão de tempo por movimento (30 · 20 · 25 · 20 · 30 · 25) — não constava do roteiro.
+- Curva de intensidade energética — era interpretação, não texto.
+- Nome "A Ascensão" para o movimento V; restaurado "Novo relaxamento
+  (não sei bem que nome dar aqui)".
+- Arquétipos atribuídos por conta própria: O Louco (I), O Animal (II), O Sábio (V).
+- Movimento VI expandido em onze itens de camada e um parágrafo interpretativo;
+  restaurado às duas frases do original: "Uma voz, o violão. A celebração."
+- Itens menores inventados: "silêncio como material" (I), "farejar, espreitar" (II),
+  "palmas" (III).
+- Seção "Camadas ainda em aberto" no fim do roteiro.
+
+Acrescentado:
+
+- Marcação explícita de camada vazia — onde o roteiro não especifica, a célula diz
+  *não especificado no roteiro* em vez de ser preenchida por suposição.
 
 ---
 
 ## v0.1 — 2026-08-12 · estrutura inicial
 
-Primeira versão completa do roteiro e da partitura visual.
-
-- Seis movimentos definidos: Abertura, A Floresta, O Batalhão, O Fogo, A Ascensão, O Despertar.
-- Divisão de tempo proposta para 150 min: 30 · 20 · 25 · 20 · 30 · 25.
-  Critério: mais tempo aos dois estados de aquietamento (I e V), que sustentam o pico;
-  Fogo curto e concentrado, porque intensidade prolongada dispersa em vez de transmutar.
-- Curva energética com dois vales e um pico único no Fogo.
-- Quatro camadas mapeadas: paisagem sonora e instrumentos, corpo e movimento,
-  voz e condução, símbolo e arquétipo.
-- Movimento V ainda sem nome definitivo — "A Ascensão" é provisório.
-- Arquétipos atribuídos onde o roteiro original não trazia: O Louco (I), O Sábio (V).
-
-**Ainda não testado com pessoas.**
+Primeira versão do roteiro em markdown e da partitura visual.
+Continha acréscimos editoriais não solicitados, revertidos na v0.2.
 
 ---
 
 <!--
-## v0.2 — data · o que aconteceu
+## v0.3 — data · o que aconteceu
 
 Teste com grupo de N pessoas em [local].
 
