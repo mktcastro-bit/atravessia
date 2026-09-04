@@ -9,9 +9,10 @@ Uma jornada sonora, corporal, vocal e simbólica de despertar
 
 Uma experiência de som, corpo, respiração, movimento, voz, imaginação e símbolo
 
-**Duração sugerida:** 2h15–2h30
+**Duração:** 1h20
 
 **Estrutura:** 6 etapas/movimentos
+**Tempo:** os seis movimentos com a mesma duração — 13 min 20 s cada; transições a definir.
 
 **Transições:** entre cada movimento e o seguinte, uma música de transição.
 

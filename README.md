@@ -3,7 +3,7 @@
 Roteiro para uma vivência – uma travessia – com sound healing.
 Uma jornada sonora, corporal, vocal e simbólica de despertar.
 
-**Duração sugerida:** 2h15–2h30 · **Estrutura:** 6 etapas/movimentos
+**Duração:** 1h20 · **Estrutura:** 6 etapas/movimentos
 
 > Projeto autoral em desenvolvimento. Este repositório é o caderno de trabalho da criação.
 

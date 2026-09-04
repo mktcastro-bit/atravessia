@@ -2,6 +2,20 @@
 
 ---
 
+## v0.16 — 2026-09-04 · duração 1h20, movimentos com o mesmo tempo
+
+Por decisão do autor, a vivência passa a durar **1h20** (era "2h15–2h30
+sugeridos") e **os seis movimentos têm a mesma duração**: 13 min 20 s cada,
+total exato. As transições seguem *a definir* — quando receberem minutos, a
+linha de tempo passa a mostrar a soma ao lado do total. A leitura "tudo com o
+mesmo tempo" foi aplicada aos movimentos; dividir também pelas transições
+(onze partes de 7 min 16 s) é uma alternativa registrada, não aplicada.
+
+Entra no roteiro (cabeçalho: Duração e Tempo), no README e na partitura
+(cabeçalho e linha de tempo, que passa a exibir minutos e segundos).
+
+---
+
 ## v0.15 — 2026-09-04 · a voz do Mar
 
 Por decisão do autor, o movimento III (O MAR) ganha a camada de voz:

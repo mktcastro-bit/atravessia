@@ -188,7 +188,7 @@
   <div class="sub">Do véu à consciência</div>
   <div class="subq">(Como poderíamos chamar essa vivência?)</div>
   <div class="meta">
-    <span class="chip">Duração sugerida: 2h15–2h30</span>
+    <span class="chip">Duração: 1h20</span>
     <span class="chip">6 etapas/movimentos</span>
     <span class="chip">som · corpo · respiração · movimento · voz · imaginação · símbolo</span>
     <span class="chip">O Louco · O Guerreiro · O Mago · O Sol · O sábio · O Mundo</span>
@@ -269,7 +269,7 @@ try{ gu.focus(); }catch(e){}
    ========================================================================= */
 const PHASES = [
 {
-  id:"I", tempo:null, nome:"INTRODUÇÃO / ABERTURA", tag:"Percepção e consciência corporal", cor:"var(--c1)",
+  id:"I", tempo:80/6, nome:"INTRODUÇÃO / ABERTURA", tag:"Percepção e consciência corporal", cor:"var(--c1)",
   estado:"repouso, receptividade, interiorização",
   elemento:"espaço / água", centro:"corpo inteiro", arquetipo:"",
   som:["sound healing","sons longos","harmônicos","tigelas","gongos muito suaves","Silêncio"],
@@ -284,7 +284,7 @@ const PHASES = [
   <p><em>Transição.</em> Música de transição – violão. Todos permanecem deitados.</p>`
 },
 {
-  id:"II", tempo:null, nome:"A FLORESTA", tag:"O despertar do animal", cor:"var(--c2)",
+  id:"II", tempo:80/6, nome:"A FLORESTA", tag:"O despertar do animal", cor:"var(--c2)",
   estado:"instinto, liberdade, espontaneidade",
   elemento:"Terra", centro:"chakra básico", arquetipo:"",
   som:["floresta","água","vento","pássaros","animais","percussões muito discretas","A música vai ganhando em intensidade, com percussões, batidas"],
@@ -295,7 +295,7 @@ const PHASES = [
   <p>A música vai ganhando em intensidade, com percussões, batidas. Os movimentos se ampliam. Inicia-se uma liberação corporal energética, para depois evoluir para o corpo do guerreiro.</p>`
 },
 {
-  id:"III", tempo:null, nome:"O MAR", tag:"", cor:"var(--c3)",
+  id:"III", tempo:80/6, nome:"O MAR", tag:"", cor:"var(--c3)",
   estado:"", elemento:"água", centro:"", arquetipo:"O Sábio",
   som:["oceano","trovão","ondas"],
   corpo:["Corpo deitado","As emoções ativadas pelo elemento água são visitadas e transmutadas pelo poder do som e pela conexão com as emoções profundas — como se a água as limpasse"],
@@ -306,7 +306,7 @@ const PHASES = [
   <p><em>Demais camadas — estado, centro — ainda não especificadas no roteiro.</em></p>`
 },
 {
-  id:"IV", tempo:null, nome:"O VENTO", tag:"O despertar do eu superior por meio da voz", cor:"var(--c7)",
+  id:"IV", tempo:80/6, nome:"O VENTO", tag:"O despertar do eu superior por meio da voz", cor:"var(--c7)",
   estado:"", elemento:"ar", centro:"", arquetipo:"",
   som:[],
   corpo:["Sentados"],
@@ -317,7 +317,7 @@ const PHASES = [
   <p><em>Nome e elemento propostos pela partitura a pedido do autor (v0.12). Estado, centro, arquétipo e paisagem sonora ainda não especificados no roteiro.</em></p>`
 },
 {
-  id:"V", tempo:null, nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
+  id:"V", tempo:80/6, nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
   estado:"intensidade, coragem, expressão, transmutação",
   elemento:"fogo", centro:"plexo solar", arquetipo:"o Mago",
   som:["A percussão cresce","Aumenta a vibração","Polirritmia"],
@@ -329,7 +329,7 @@ const PHASES = [
   <p>Depois de chegar a um ápice, começa a desaceleração.</p>`
 },
 {
-  id:"VI", tempo:null, nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
+  id:"VI", tempo:80/6, nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
   estado:"integração, alegria, comunhão",
   elemento:"luz", centro:"", arquetipo:"Sol / Estrela / Mundo / O Sábio",
   som:["Uma voz, o violão"],
@@ -383,15 +383,21 @@ let html = "";
 
 // Linha de tempo. Os tempos por movimento e por transição ainda não constam do
 // roteiro (a divisão da v0.1 foi retirada na v0.2 por não ser texto do autor);
-// ficam "a definir" até ele preencher `tempo` em cada item. O único número
-// conhecido é o total do roteiro, 2h15–2h30.
-const fmtMin = m => m == null ? `<span class="vazio">a definir</span>`
-  : m >= 60 ? `<b>${Math.floor(m/60)}h${m%60 ? String(m%60).padStart(2,"0") : ""}</b>` : `<b>${m} min</b>`;
+// ficam "a definir" até ele preencher `tempo` em cada item (minutos; aceita
+// fração). Decisão do autor em 04/09: seis movimentos iguais, total 1h20.
+const fmtMin = m => {
+  if (m == null) return `<span class="vazio">a definir</span>`;
+  const s = Math.round(m*60), h = Math.floor(s/3600), mm = Math.floor(s%3600/60), ss = s%60;
+  const txt = h ? `${h}h${String(mm).padStart(2,"0")}${ss ? ":"+String(ss).padStart(2,"0") : ""}`
+                : ss ? `${mm}:${String(ss).padStart(2,"0")}` : `${mm} min`;
+  return `<b>${txt}</b>`;
+};
+const TOTAL_ROTEIRO = "1h20";
 const definidos = [...PHASES, ...TRANS].map(x=>x.tempo).filter(x=>x!=null);
 const soma = definidos.reduce((a,b)=>a+b,0);
 const totLabel = definidos.length
-  ? `soma: ${fmtMin(soma).replace(/<\/?b>/g,"")} · roteiro: 2h15–2h30`
-  : `roteiro: 2h15–2h30`;
+  ? `soma: ${fmtMin(soma).replace(/<\/?b>/g,"")} · roteiro: ${TOTAL_ROTEIRO}`
+  : `roteiro: ${TOTAL_ROTEIRO}`;
 html += `<div class="row tempo"><div class="stub"><b>Tempo</b><span class="tot">${totLabel}</span></div>`;
 PHASES.forEach((p,i)=>{
   html += `<div class="tcell" style="--c:${p.cor}">${fmtMin(p.tempo)}</div>`;
