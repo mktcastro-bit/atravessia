@@ -2,6 +2,14 @@
 
 ---
 
+## v0.9 — 2026-09-04 · arquétipo do Mar: O Sábio
+
+Por decisão do autor, o arquétipo do movimento III (O MAR) é **O Sábio**.
+Entra no roteiro e na camada *Estado, elemento & centro* da partitura.
+O Sábio também consta do movimento VI e da lista de arquétipos do cabeçalho.
+
+---
+
 ## v0.8 — 2026-09-04 · o movimento III passa a ser O MAR
 
 Por decisão do autor, o movimento III é **trocado inteiro**: sai O Batalhão (o

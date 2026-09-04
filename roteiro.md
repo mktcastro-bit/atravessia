@@ -68,9 +68,10 @@ A música vai ganhando em intensidade, com percussões, batidas. Os movimentos s
 
 ## III — O MAR
 
+**Arquétipo:** O Sábio
 **Paisagem sonora:** oceano, trovão e ondas
 
-*(Demais camadas — estado, elemento, arquétipo, corpo, voz — ainda não especificadas.)*
+*(Demais camadas — estado, elemento, corpo, voz — ainda não especificadas.)*
 
 ---
 
