@@ -2,6 +2,15 @@
 
 ---
 
+## v0.23 — 2026-09-05 · os instrumentos da virada
+
+Por decisão do autor, a paisagem sonora da transição Mar → Vento é **mantra —
+voz, shruti box, violão e tambura**, com os quatro ícones na coluna de virada
+(dois novos, shruti box e tambura, em SVG de traço). Na coluna larga os ícones
+ficam em linha; nas estreitas, empilhados.
+
+---
+
 ## v0.22 — 2026-09-05 · as camadas da virada
 
 Por decisão do autor, a transição Mar → Vento (8 min) ganha conteúdo em todas

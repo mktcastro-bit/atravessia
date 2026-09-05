@@ -79,7 +79,7 @@ Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e 
 *(Demais camadas — estado, centro — ainda não especificadas.)*
 
 **Transição — 8 min.** A partir daqui, as pessoas passam a fazer parte da experiência sonora de maneira mais ativa.
-**Paisagem sonora:** mantra
+**Paisagem sonora:** mantra — voz, shruti box, violão e tambura
 **Corpo e movimento:** as pessoas sentadas
 **Voz e condução:** as pessoas entoando mantras
 **Estado:** presença — da escuta à participação *(proposta)*
