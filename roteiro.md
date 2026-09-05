@@ -96,6 +96,8 @@ Sentados. Começam as vocalizações de mantras, em canto e resposta com o condu
 
 *(Nome e elemento propostos a pedido do autor. Estado, centro e arquétipo ainda não especificados.)*
 
+**Transição:** música do Mapu Huni Kuin, lenta — voz e violão
+
 ---
 
 ## V — O FOGO (e o Mago): Poder e transformação

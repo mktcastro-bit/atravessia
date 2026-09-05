@@ -2,6 +2,16 @@
 
 ---
 
+## v0.30 — 2026-09-05 · transição Vento → Fogo
+
+Por decisão do autor, a transição entre O Vento (IV) e O Fogo (V) é **uma
+música do Mapu Huni Kuin, lenta — voz e violão**. Entra no roteiro como bloco
+de transição do IV e na partitura, com os ícones de voz e violão; o cabeçalho
+dessa transição passa a abrir o painel de detalhe. Sai do standby a música
+registrada na v0.29.
+
+---
+
 ## v0.29 — 2026-09-05 · a transição fica só com Mamãe Oxum
 
 Por decisão do autor, os elementos sonoros da transição Mar → Vento passam
