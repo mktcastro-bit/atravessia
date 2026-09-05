@@ -2,6 +2,20 @@
 
 ---
 
+## v0.22 — 2026-09-05 · as camadas da virada
+
+Por decisão do autor, a transição Mar → Vento (8 min) ganha conteúdo em todas
+as camadas: **paisagem sonora — mantra; corpo e movimento — as pessoas
+sentadas; voz e condução — as pessoas entoando mantras.** Na fala do autor
+havia uma palavra ilegível na camada de voz ("… mantras e râlem"), deixada de
+fora até ele esclarecer.
+
+**Estado, elemento e centro foram propostos pela partitura a pedido expresso
+do autor**, e estão marcados como proposta: *presença — da escuta à
+participação* · *água → ar* · *garganta*.
+
+---
+
 ## v0.21 — 2026-09-04 · o layout reflete as duas fases
 
 A partitura passa a mostrar a forma que a vivência ganhou com a virada: uma
