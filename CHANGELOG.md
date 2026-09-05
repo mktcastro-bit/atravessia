@@ -2,6 +2,22 @@
 
 ---
 
+## v0.40 — 2026-09-05 · soma fechada em 1h20 · layout vertical para celular
+
+**Tempo.** Por decisão do autor, o total volta a fechar em **1h20**: as
+transições ficam como definidas (5 · 5 · 8 · 5 · 5 = 28 min) e os seis
+movimentos dividem os 52 min restantes — **8 min 40 s cada**. A linha de tempo
+mostra "soma: 1h20 · roteiro: 1h20".
+
+**Celular.** Abaixo de 760 px a partitura horizontal dá lugar a uma **pilha
+vertical**: cada movimento é um cartão com título, tempo e as quatro camadas;
+entre eles, cartões de transição com ícones e tempo; a virada é o cartão
+dourado "a partir daqui"; os dois arcos da faixa viram títulos de seção. Os
+botões de camada e o painel de detalhe funcionam nos dois layouts. No desktop
+nada muda. Mesmo conteúdo, mesma fonte de dados — nada foi acrescentado.
+
+---
+
 ## v0.39 — 2026-09-05 · ajuste para celular
 
 Público da página: os parceiros de sound healing do autor, lendo a partitura
