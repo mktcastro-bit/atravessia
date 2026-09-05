@@ -2,6 +2,15 @@
 
 ---
 
+## v0.32 — 2026-09-05 · transição Fogo → Despertar
+
+Por decisão do autor, a transição entre O Fogo (V) e O Despertar (VI) é
+**Kayawake Baine — Mapu Huni Kuin**. Entra no roteiro como bloco de transição
+do V e na partitura; o cabeçalho dessa transição passa a abrir o painel. Com
+isso, as cinco transições têm música definida.
+
+---
+
 ## v0.31 — 2026-09-05 · avisos atualizados
 
 O aviso de rodapé da partitura e a seção "Sobre a partitura visual" do README

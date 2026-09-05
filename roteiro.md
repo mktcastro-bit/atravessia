@@ -113,6 +113,8 @@ Pode haver elementos inspirados em práticas corporais guerreiras de diferentes 
 
 Depois de chegar a um ápice, começa a desaceleração.
 
+**Transição:** Kayawake Baine — Mapu Huni Kuin
+
 ---
 
 ## VI — O DESPERTAR
