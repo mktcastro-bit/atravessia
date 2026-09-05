@@ -18,7 +18,7 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 
 **Princípio dramatúrgico:** tomar consciência do corpo → despertar o instinto → visitar a emoção → despertar a voz → despertar o guerreiro → celebrar e retornar.
 
-**Arquétipos que podem ser ativados:** O Louco, O Sábio, O Guerreiro, O Sol, O Mundo.
+**Arquétipos que podem ser ativados:** O Sábio, O Guerreiro, O Sol, O Mundo.
 
 ---
 

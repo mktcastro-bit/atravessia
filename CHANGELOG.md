@@ -2,6 +2,13 @@
 
 ---
 
+## v0.37 — 2026-09-05 · sai O Louco
+
+Por decisão do autor, O Louco sai da lista de arquétipos, no roteiro e no
+cabeçalho da partitura. A lista fica: O Sábio, O Guerreiro, O Sol, O Mundo.
+
+---
+
 ## v0.36 — 2026-09-05 · segunda música da virada
 
 Por decisão do autor, a transição Mar → Vento ganha uma segunda música depois
