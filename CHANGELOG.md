@@ -2,6 +2,13 @@
 
 ---
 
+## v0.38 — 2026-09-05 · o despertar das emoções
+
+Por decisão do autor, o movimento III (O MAR) ganha o subtítulo **O despertar
+das emoções**, no roteiro e na partitura.
+
+---
+
 ## v0.37 — 2026-09-05 · sai O Louco
 
 Por decisão do autor, O Louco sai da lista de arquétipos, no roteiro e no

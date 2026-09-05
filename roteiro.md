@@ -66,6 +66,7 @@ A música vai ganhando em intensidade, com percussões, batidas. Os movimentos s
 ---
 
 ## III — O MAR
+### O despertar das emoções
 
 **Elemento:** água
 **Arquétipo:** O Sábio
