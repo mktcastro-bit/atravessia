@@ -2,6 +2,13 @@
 
 ---
 
+## v0.36 — 2026-09-05 · segunda música da virada
+
+Por decisão do autor, a transição Mar → Vento ganha uma segunda música depois
+de Mamãe Oxum: **Cande Boioio** (grafia conforme ditada; a confirmar).
+
+---
+
 ## v0.35 — 2026-09-05 · O Fogo desperta o guerreiro
 
 Por decisão do autor, o movimento V mantém o nome **O FOGO** e passa a ter o
