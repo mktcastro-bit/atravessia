@@ -92,7 +92,7 @@ Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e 
 ### O despertar do eu superior por meio da voz
 
 **Elemento:** ar
-**Paisagem sonora:** música — violão e voz (Huni Kuin), lenta. Artista: Mapu Huni Kuin.
+**Paisagem sonora:** Mamãe Oxum
 **Voz:** vocalizações de mantras — canto e resposta entre o condutor e os participantes
 
 Sentados. Começam as vocalizações de mantras, em canto e resposta com o condutor, para despertar o eu superior por meio da voz.
@@ -106,6 +106,7 @@ Sentados. Começam as vocalizações de mantras, em canto e resposta com o condu
 **Estado:** intensidade, coragem, expressão, transmutação
 **Elemento:** fogo
 **Centro simbólico:** plexo solar
+**Paisagem sonora:** as músicas dos Huni Kuin
 
 A percussão cresce. O corpo assume posições cada vez mais expansivas. Aumenta a vibração. Peito aberto, pernas firmes, braços fortes, olhar presente, vocalizações mais intensas. Polirritmia.
 
@@ -121,6 +122,7 @@ Depois de chegar a um ápice, começa a desaceleração.
 **Estado:** integração, alegria, comunhão
 **Elemento:** luz
 **Arquétipos:** Sol/ Estrela/ Mundo/ O Sábio
+**Paisagem sonora:** uma última música do Mapu Huni Kuin, com polirritmia
 
 Uma voz, o violão. A celebração.
 

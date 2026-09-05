@@ -2,6 +2,21 @@
 
 ---
 
+## v0.27 — 2026-09-05 · a trilha se redistribui
+
+Por decisão do autor, corrigindo a v0.25:
+
+- **O Vento (IV)** abre com **Mamãe Oxum** — sai dali a música lenta de violão e
+  voz Huni Kuin.
+- **O Fogo (V)** ganha **as músicas dos Huni Kuin**, somando-se à percussão, à
+  vibração e à polirritmia que o roteiro já trazia.
+- **O Despertar (VI)** fecha com **uma última música do Mapu Huni Kuin, com
+  polirritmia**, ao lado de "uma voz, o violão".
+
+Entra no roteiro e na partitura, na camada *Paisagem sonora* dos três.
+
+---
+
 ## v0.26 — 2026-09-05 · a nota fecha a página
 
 Por decisão do autor, a nota "As pessoas no centro" passa a ser o último
