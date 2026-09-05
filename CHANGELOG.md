@@ -5,9 +5,9 @@
 ## v0.29 — 2026-09-05 · a transição fica só com Mamãe Oxum
 
 Por decisão do autor, os elementos sonoros da transição Mar → Vento passam
-para o Vento, e a transição fica só com **Mamãe Oxum — voz e viola**.
+para o Vento, e a transição fica só com **Mamãe Oxum — voz e violão**.
 
-- **Transição:** paisagem sonora "Mamãe Oxum — voz e viola"; sai "as pessoas
+- **Transição:** paisagem sonora "Mamãe Oxum — voz e violão"; sai "as pessoas
   entoando mantras" (já consta do Vento). Permanecem a frase da virada, "as
   pessoas sentadas" e as propostas de estado, elemento e centro.
 - **O Vento:** paisagem sonora "mantra — voz, shruti box, violão e tambura",
