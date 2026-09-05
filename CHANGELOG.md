@@ -2,6 +2,21 @@
 
 ---
 
+## v0.39 — 2026-09-05 · ajuste para celular
+
+Público da página: os parceiros de sound healing do autor, lendo a partitura
+para entender a vivência. A horizontalidade fica; o celular deixa de esconder
+o essencial:
+
+- os rótulos das linhas (Participação, Tempo, Movimento, camadas) passam a
+  aparecer também no celular, numa coluna estreita fixa à esquerda;
+- o quadro fica mais compacto no celular — cerca de dois movimentos por tela;
+- uma pista "deslize para o lado →" acima do quadro, só em telas pequenas.
+
+Nenhuma alteração de texto.
+
+---
+
 ## v0.38 — 2026-09-05 · o despertar das emoções
 
 Por decisão do autor, o movimento III (O MAR) ganha o subtítulo **O despertar
