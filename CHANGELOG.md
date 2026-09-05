@@ -2,6 +2,14 @@
 
 ---
 
+## v0.41 — 2026-09-05 · sai a pergunta do título
+
+Por decisão do autor, sai do cabeçalho a linha *"(Como poderíamos chamar essa
+vivência?)"*, no roteiro e na partitura. O título permanece "A Travessia — Do
+véu à consciência".
+
+---
+
 ## v0.40 — 2026-09-05 · soma fechada em 1h20 · layout vertical para celular
 
 **Tempo.** Por decisão do autor, o total volta a fechar em **1h20**: as

@@ -1,6 +1,5 @@
 # Roteiro para uma vivência – uma travessia – com sound healing
 
-*(Como poderíamos chamar essa vivência?)*
 
 Uma jornada sonora, corporal, vocal e simbólica de despertar
 
