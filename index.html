@@ -95,6 +95,9 @@
   .tr.destaque .it{font-size:12px;line-height:1.45;color:#e2d9cb}
   .tr.destaque .ico{width:40px;height:40px;align-self:center}
   .tr .icos{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .cell .icos{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:9px}
+  .cell .icos .ico{width:30px;height:30px;color:var(--c6);opacity:.9}
+  .cell .icos .ico svg{width:100%;height:100%;display:block}
   .tr.destaque .icos{display:grid;grid-template-columns:repeat(auto-fit,40px);justify-content:center;gap:8px 14px;max-width:100px;align-self:center}
   .tr .sym{font-family:Georgia,serif;font-size:18px;color:var(--c6);opacity:.85}
   .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
@@ -339,12 +342,12 @@ const PHASES = [
 {
   id:"IV", tempo:80/6, nome:"O VENTO", tag:"O despertar do eu superior por meio da voz", cor:"var(--c7)",
   estado:"", elemento:"ar", centro:"", arquetipo:"",
-  som:["Mamãe Oxum"],
+  som:["Mantra — voz, shruti box, violão e tambura"], icones:["voz","shrutibox","violao","tambura"],
   corpo:["Sentados"],
   voz:["Vocalizações de mantras","Canto e resposta entre o condutor e os participantes","Despertar o eu superior por meio da voz"],
   simb:["Elemento: ar"],
   texto:`<p><b>Elemento:</b> ar.</p>
-  <p><b>Paisagem sonora:</b> Mamãe Oxum.</p>
+  <p><b>Paisagem sonora:</b> mantra — voz, shruti box, violão e tambura.</p>
   <p>Sentados. Começam as vocalizações de mantras, em canto e resposta com o condutor, para despertar o eu superior por meio da voz.</p>
   <p><em>Nome e elemento propostos pela partitura a pedido do autor (v0.12). Estado, centro e arquétipo ainda não especificados no roteiro.</em></p>`
 },
@@ -420,9 +423,9 @@ const TRANS = [
   {de:"I",   para:"II",  tempo:5, som:["Música de transição – violão"], corpo:["Todos permanecem deitados"], icones:["violao"]},
   {de:"II",  para:"III", tempo:5, som:["Música de transição – voz e violão"], icones:["voz","violao"]},
   {de:"III", para:"IV",  tempo:8,
-   som:["Mantra — voz, shruti box, violão e tambura"], icones:["voz","shrutibox","violao","tambura"],
+   som:["Mamãe Oxum — voz e viola"], icones:["voz","violao"],
    corpo:["A partir daqui, as pessoas passam a fazer parte da experiência sonora de maneira mais ativa.","As pessoas sentadas"],
-   voz:["As pessoas entoando mantras"],
+   voz:[],
    simb:["Estado: presença — da escuta à participação (proposta)","Elemento: água → ar (proposta)","Centro: garganta (proposta)"],
    icones_corpo:["sukhasana"], destaque:true},
   {de:"IV",  para:"V",   tempo:5, som:[]},
@@ -505,7 +508,8 @@ LAYERS.forEach(L=>{
     const body = its.length
       ? `<ul>${its.map(x=>`<li>${x.replace(/<q>(.*?)<\/q>/g,'<span class="q">$1</span>')}</li>`).join("")}</ul>`
       : `<span class="vazio">não especificado no roteiro</span>`;
-    html += `<div class="cell${ativo(i,false)}" style="--c:${p.cor}">${body}</div>`;
+    const icos = L.key==="som" && (p.icones||[]).length ? `<span class="icos">${p.icones.map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}</span>` : "";
+    html += `<div class="cell${ativo(i,false)}" style="--c:${p.cor}">${icos}${body}</div>`;
     if (i < TRANS.length) html += trCell(TRANS[i], L.key, ativo(i,true));
   });
   html += `</div>`;

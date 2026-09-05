@@ -2,6 +2,25 @@
 
 ---
 
+## v0.29 — 2026-09-05 · a transição fica só com Mamãe Oxum
+
+Por decisão do autor, os elementos sonoros da transição Mar → Vento passam
+para o Vento, e a transição fica só com **Mamãe Oxum — voz e viola**.
+
+- **Transição:** paisagem sonora "Mamãe Oxum — voz e viola"; sai "as pessoas
+  entoando mantras" (já consta do Vento). Permanecem a frase da virada, "as
+  pessoas sentadas" e as propostas de estado, elemento e centro.
+- **O Vento:** paisagem sonora "mantra — voz, shruti box, violão e tambura",
+  com os quatro ícones. Sai dali "Mamãe Oxum" (v0.27).
+
+A partitura passa a mostrar ícones também nas células de movimento, na camada
+de paisagem sonora.
+
+**Em standby, a pedido do autor, para estudo:** a música lenta de violão e voz
+do Mapu Huni Kuin, pensada primeiro para o Vento (v0.25), hoje sem lugar.
+
+---
+
 ## v0.28 — 2026-09-05 · Introdução sem gongos e sem silêncio
 
 Por decisão do autor, saem da paisagem sonora da Introdução/Abertura os
