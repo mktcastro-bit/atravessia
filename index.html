@@ -82,6 +82,12 @@
   .tr.destaque,.tcell.tr.destaque{border:1px solid color-mix(in srgb,var(--c6) 70%,transparent);
     background:linear-gradient(180deg,rgba(201,162,39,.16),rgba(201,162,39,.05))}
   .tr.destaque .sym{opacity:1}
+  .tr.hd.clk{cursor:pointer;transition:.18s}
+  .tr.hd.clk:hover{transform:translateY(-3px);border-color:rgba(240,235,226,.5)}
+  .tr.hd.sel{outline:2px solid #f0ebe2;outline-offset:2px}
+  .panel .picos{display:flex;gap:12px;margin:4px 0 16px}
+  .panel .picos .ico{width:28px;height:28px;color:var(--c6)}
+  .panel .picos .ico svg{width:100%;height:100%;display:block}
   .tr.destaque .tl{color:#e6d39a}
   .tr.destaque .tl,.tr.destaque .it,.tr.destaque .vazio{writing-mode:horizontal-tb;transform:none}
   .tr.destaque{padding:10px 11px;align-items:flex-start;justify-content:flex-start;text-align:left;gap:8px}
@@ -418,7 +424,8 @@ const TRANS = [
   {de:"IV",  para:"V",   tempo:5, som:[]},
   {de:"V",   para:"VI",  tempo:5, som:[]},
 ];
-const trHead = (tr, extra="") => `<div class="tr hd${tr.destaque?" destaque":""}${extra}"><span class="sym">♪</span><span class="tl">transição</span></div>`;
+const temConteudo = tr => ["som","corpo","voz","simb"].some(k => (tr[k]||[]).length);
+const trHead = (tr, extra="", i=0) => `<div class="tr hd${tr.destaque?" destaque":""}${extra}${temConteudo(tr)?" clk":""}" data-t="${i}"><span class="sym">♪</span><span class="tl">transição</span></div>`;
 const trCell = (tr, key, extra="") => key !== "som"
   ? `<div class="tr${tr.destaque?" destaque":""}${extra}">${key==="corpo" && (tr.icones_corpo||[]).length ? `<span class="icos">${tr.icones_corpo.map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}</span>` : ""}${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
   : `<div class="tr${tr.destaque?" destaque":""}${extra}">${(tr.icones||[]).length ? `<span class="icos">${tr.icones.map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}</span>` : ""}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;
@@ -483,7 +490,7 @@ html += `<div class="row"><div class="stub"><b>Movimento</b></div>`;
 PHASES.forEach((p,i)=>{
   html += `<div class="ph${ativo(i,false)}" style="--c:${p.cor}" data-i="${i}">
     <div class="num">${p.id}</div><div class="nm">${p.nome}</div><div class="tt">${p.tag}</div></div>`;
-  if (i < TRANS.length) html += trHead(TRANS[i], ativo(i,true));
+  if (i < TRANS.length) html += trHead(TRANS[i], ativo(i,true), i);
 });
 html += `</div>`;
 
@@ -503,14 +510,40 @@ LAYERS.forEach(L=>{
 board.innerHTML = html;
 
 const panel = document.getElementById('panel');
+const fechar = `<button class="close" onclick="document.getElementById('panel').classList.remove('open');document.querySelectorAll('.ph.sel,.tr.hd.sel').forEach(n=>n.classList.remove('sel'))">fechar</button>`;
+const card = (t,v)=> v ? `<div class="pcard"><h4>${t}</h4><p>${v}</p></div>` : "";
+
+// Painel de uma transição: o mesmo texto das camadas, reorganizado — nada novo.
+function abrirTransicao(i){
+  const tr = TRANS[i];
+  const de = PHASES[i], para = PHASES[i+1];
+  const rotulo = k => LAYERS.find(L=>L.key===k).label.replace(/<br>/g," ");
+  const campo = nome => { const it = (tr.simb||[]).find(x=>x.startsWith(nome+":")); return it ? it.slice(nome.length+1).trim() : ""; };
+  const icos = [...(tr.icones||[]), ...(tr.icones_corpo||[])].filter(k=>ICONS[k]);
+  const tempo = tr.tempo==null ? "tempo a definir" : fmtMin(tr.tempo).replace(/<\/?b>/g,"");
+  panel.innerHTML = `${fechar}
+    <h2>Transição ${tr.de} → ${tr.para}</h2>
+    <div class="psub">${de.nome} → ${para.nome} · ${tempo}</div>
+    ${icos.length ? `<div class="picos">${icos.map(k=>`<span class="ico">${ICONS[k]}</span>`).join("")}</div>` : ""}
+    <div class="pgrid">
+      ${card('Estado',campo('Estado'))}${card('Elemento',campo('Elemento'))}${card('Centro',campo('Centro'))}${card('Arquétipo',campo('Arquétipo'))}
+    </div>
+    <div class="ptext">${["som","corpo","voz"].map(k => (tr[k]||[]).length
+      ? `<p><b>${rotulo(k)}:</b> ${tr[k].map(x=>x.replace(/<q>(.*?)<\/q>/g,'<em>$1</em>')).join(" · ")}</p>` : "").join("")}</div>`;
+  panel.classList.add('open');
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
 board.addEventListener('click', e=>{
-  const el = e.target.closest('.ph'); if(!el) return;
-  document.querySelectorAll('.ph').forEach(n=>n.classList.remove('sel'));
+  const th = e.target.closest('.tr.hd.clk');
+  const el = e.target.closest('.ph');
+  if(!th && !el) return;
+  document.querySelectorAll('.ph.sel,.tr.hd.sel').forEach(n=>n.classList.remove('sel'));
+  if(th){ th.classList.add('sel'); abrirTransicao(+th.dataset.t); return; }
   el.classList.add('sel');
   const p = PHASES[+el.dataset.i];
-  const card = (t,v)=> v ? `<div class="pcard"><h4>${t}</h4><p>${v}</p></div>` : "";
   panel.innerHTML = `
-    <button class="close" onclick="document.getElementById('panel').classList.remove('open');document.querySelectorAll('.ph').forEach(n=>n.classList.remove('sel'))">fechar</button>
+    ${fechar}
     <h2>${p.id} — ${p.nome}</h2>
     <div class="psub">${p.tag}</div>
     <div class="pgrid">

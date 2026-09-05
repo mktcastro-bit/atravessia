@@ -2,6 +2,16 @@
 
 ---
 
+## v0.24 — 2026-09-05 · transições com painel de detalhe
+
+A pedido do autor, o cabeçalho ♪ transição passa a ser clicável — como os
+movimentos — em toda transição que tiver conteúdo, abrindo o mesmo painel:
+título "Transição X → Y", os dois movimentos e o tempo, os ícones, os cartões
+de estado/elemento/centro/arquétipo e o texto das camadas. É o mesmo texto das
+camadas, reorganizado; nada foi acrescentado. Transições vazias seguem inertes.
+
+---
+
 ## v0.23 — 2026-09-05 · os instrumentos da virada
 
 Por decisão do autor, a paisagem sonora da transição Mar → Vento é **mantra —
