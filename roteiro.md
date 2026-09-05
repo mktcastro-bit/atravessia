@@ -16,9 +16,9 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 
 **Transições:** entre cada movimento e o seguinte, uma música de transição.
 
-**Princípio dramatúrgico:** tomar consciência do corpo → despertar o instinto → reunir a força → atravessar o fogo → aquietar → ascender → encontrar a sabedoria → celebrar e retornar.
+**Princípio dramatúrgico:** tomar consciência do corpo → despertar o instinto → visitar a emoção → despertar a voz → despertar o guerreiro → celebrar e retornar.
 
-**Arquétipos que podem ser ativados:** O Louco, O Guerreiro, O Mago, O Sol, O sábio, O Mundo.
+**Arquétipos que podem ser ativados:** O Louco, O Sábio, O Guerreiro, O Sol, O Mundo.
 
 ---
 
@@ -100,20 +100,25 @@ Sentados. Começam as vocalizações de mantras, em canto e resposta com o condu
 
 ---
 
-## V — O FOGO (e o Mago): Poder e transformação
+## V — O FOGO
+### O despertar do guerreiro
 
-**Estado:** intensidade, coragem, expressão, transmutação
+**Estado:** força, presença, poder coletivo · intensidade, coragem
 **Elemento:** fogo
 **Centro simbólico:** plexo solar
+**Arquétipo:** O Guerreiro
+**Referências simbólicas:** Ogum, guerreiros da floresta, pulsação do coração, marcha, inspiração na dança de guerra dos Maoris e xamânicos. Caboclos e africanos.
 **Paisagem sonora:** as músicas dos Huni Kuin
 
-A percussão cresce. O corpo assume posições cada vez mais expansivas. Aumenta a vibração. Peito aberto, pernas firmes, braços fortes, olhar presente, vocalizações mais intensas. Polirritmia.
+Os participantes se levantam: espreguiçam, alongam, deixam vir os movimentos que o corpo pede — tremer, sacudir, girar — e seguem com a música.
 
-Pode haver elementos inspirados em práticas corporais guerreiras de diferentes culturas — sempre reinterpretados de maneira autoral e não como reprodução de um ritual tradicional específico.
+A percussão cresce. Os movimentos começam a adquirir organização. A imagem do guerreiro pode ser explorada através do peso dos pés, da verticalidade, marcha, pulsação, peito, olhar, voz, sincronização coletiva, proteção, enfrentamento, limite, coragem.
 
-Depois de chegar a um ápice, começa a desaceleração.
+O ritmo cresce. O grupo começa a caminhar em conjunto. Forma-se uma roda e inicia-se uma pulsação coletiva, com coreografia e voz. As vocalizações, abertas no Vento, ficam mais intensas. Polirritmia.
 
-**Transição:** Kayawake Baine — Mapu Huni Kuin
+Eu encontro minha força no corpo e no coletivo. O movimento chega a um ápice e é entregue à transição.
+
+**Transição:** depois do ápice, a desaceleração — Kayawake Baine, Mapu Huni Kuin
 
 ---
 

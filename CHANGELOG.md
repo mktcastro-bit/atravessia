@@ -2,6 +2,41 @@
 
 ---
 
+## v0.35 — 2026-09-05 · O Fogo desperta o guerreiro
+
+Por decisão do autor, o movimento V mantém o nome **O FOGO** e passa a ter o
+arquétipo **O Guerreiro** — subtítulo *O despertar do guerreiro*; sai o Mago.
+O texto foi reconstruído a partir de material do próprio autor: o do Batalhão
+(guardado na v0.8), o parágrafo do espreguiçar que saíra da Introdução (v0.7),
+e a indicação de que aqui os participantes se levantam e seguem com a música.
+A desaceleração passa para a transição Fogo → Despertar (*Kayawake Baine*).
+
+Com isso fecham as pontas soltas do cabeçalho: o princípio dramatúrgico passa a
+*tomar consciência do corpo → despertar o instinto → visitar a emoção →
+despertar a voz → despertar o guerreiro → celebrar e retornar*, e a lista de
+arquétipos fica *O Louco, O Sábio, O Guerreiro, O Sol, O Mundo*. O fim do II
+("evoluir para o corpo do guerreiro") volta a apontar para um movimento que
+existe.
+
+**Texto anterior do V, na íntegra:**
+
+> ## V — O FOGO (e o Mago): Poder e transformação
+>
+> **Estado:** intensidade, coragem, expressão, transmutação
+> **Elemento:** fogo
+> **Centro simbólico:** plexo solar
+> **Paisagem sonora:** as músicas dos Huni Kuin
+>
+> A percussão cresce. O corpo assume posições cada vez mais expansivas. Aumenta a vibração. Peito aberto, pernas firmes, braços fortes, olhar presente, vocalizações mais intensas. Polirritmia.
+>
+> Pode haver elementos inspirados em práticas corporais guerreiras de diferentes culturas — sempre reinterpretados de maneira autoral e não como reprodução de um ritual tradicional específico.
+>
+> Depois de chegar a um ápice, começa a desaceleração.
+>
+> **Transição:** Kayawake Baine — Mapu Huni Kuin
+
+---
+
 ## v0.34 — 2026-09-05 · publicada na Vercel
 
 A partitura passa a ser servida em **https://a-travessia.vercel.app** (projeto

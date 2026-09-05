@@ -227,10 +227,10 @@
     <span class="chip">Duração: 1h20</span>
     <span class="chip">6 etapas/movimentos</span>
     <span class="chip">som · corpo · respiração · movimento · voz · imaginação · símbolo</span>
-    <span class="chip">O Louco · O Guerreiro · O Mago · O Sol · O sábio · O Mundo</span>
+    <span class="chip">O Louco · O Sábio · O Guerreiro · O Sol · O Mundo</span>
   </div>
   <div class="arc">
-    tomar consciência do corpo → despertar o instinto → reunir a força → atravessar o fogo → aquietar → ascender → encontrar a sabedoria → celebrar e retornar
+    tomar consciência do corpo → despertar o instinto → visitar a emoção → despertar a voz → despertar o guerreiro → celebrar e retornar
   </div>
 </header>
 
@@ -355,17 +355,18 @@ const PHASES = [
   <p><em>Nome e elemento propostos pela partitura a pedido do autor (v0.12). Estado, centro e arquétipo ainda não especificados no roteiro.</em></p>`
 },
 {
-  id:"V", tempo:80/6, nome:"O FOGO (e o Mago)", tag:"Poder e transformação", cor:"var(--c4)",
-  estado:"intensidade, coragem, expressão, transmutação",
-  elemento:"fogo", centro:"plexo solar", arquetipo:"o Mago",
-  som:["As músicas dos Huni Kuin","A percussão cresce","Aumenta a vibração","Polirritmia"],
-  corpo:["O corpo assume posições cada vez mais expansivas","Peito aberto, pernas firmes, braços fortes, olhar presente","Elementos inspirados em práticas corporais guerreiras de diferentes culturas — sempre reinterpretados de maneira autoral e não como reprodução de um ritual tradicional específico","Depois de chegar a um ápice, começa a desaceleração"],
-  voz:["Vocalizações mais intensas"],
-  simb:["Estado: intensidade, coragem, expressão, transmutação","Elemento: fogo","Centro simbólico: plexo solar","O Fogo é transmutação"],
+  id:"V", tempo:80/6, nome:"O FOGO", tag:"O despertar do guerreiro", cor:"var(--c4)",
+  estado:"força, presença, poder coletivo · intensidade, coragem",
+  elemento:"fogo", centro:"plexo solar", arquetipo:"O Guerreiro",
+  som:["As músicas dos Huni Kuin","A percussão cresce","O ritmo cresce","Polirritmia"],
+  corpo:["Os participantes se levantam: espreguiçam, alongam, deixam vir os movimentos que o corpo pede — tremer, sacudir, girar — e seguem com a música","Os movimentos começam a adquirir organização","Peso dos pés, verticalidade, marcha, pulsação, peito, olhar","Sincronização coletiva, proteção, enfrentamento, limite, coragem","O grupo começa a caminhar em conjunto; forma-se uma roda; pulsação coletiva"],
+  voz:["Coreografia e voz","As vocalizações, abertas no Vento, ficam mais intensas"],
+  simb:["Estado: força, presença, poder coletivo · intensidade, coragem","Elemento: fogo","Centro: plexo solar","Arquétipo: O Guerreiro","Referências: Ogum, guerreiros da floresta, pulsação do coração, marcha, dança de guerra dos Maoris e xamânicos. Caboclos e africanos.","Eu encontro minha força no corpo e no coletivo"],
   texto:`<p><b>Paisagem sonora:</b> as músicas dos Huni Kuin.</p>
-  <p>A percussão cresce. O corpo assume posições cada vez mais expansivas. Aumenta a vibração. Peito aberto, pernas firmes, braços fortes, olhar presente, vocalizações mais intensas. Polirritmia.</p>
-  <p>Pode haver elementos inspirados em práticas corporais guerreiras de diferentes culturas — sempre reinterpretados de maneira autoral e não como reprodução de um ritual tradicional específico.</p>
-  <p>Depois de chegar a um ápice, começa a desaceleração.</p>`
+  <p>Os participantes se levantam: espreguiçam, alongam, deixam vir os movimentos que o corpo pede — tremer, sacudir, girar — e seguem com a música.</p>
+  <p>A percussão cresce. Os movimentos começam a adquirir organização. A imagem do guerreiro pode ser explorada através do peso dos pés, da verticalidade, marcha, pulsação, peito, olhar, voz, sincronização coletiva, proteção, enfrentamento, limite, coragem.</p>
+  <p>O ritmo cresce. O grupo começa a caminhar em conjunto. Forma-se uma roda e inicia-se uma pulsação coletiva, com coreografia e voz. As vocalizações, abertas no Vento, ficam mais intensas. Polirritmia.</p>
+  <p>Eu encontro minha força no corpo e no coletivo. O movimento chega a um ápice e é entregue à transição.</p>`
 },
 {
   id:"VI", tempo:80/6, nome:"O DESPERTAR", tag:"A celebração da consciência", cor:"var(--c6)",
@@ -437,7 +438,7 @@ const TRANS = [
    simb:["Estado: presença — da escuta à participação (proposta)","Elemento: água → ar (proposta)","Centro: garganta (proposta)"],
    icones_corpo:["sukhasana"], destaque:true},
   {de:"IV",  para:"V",   tempo:5, som:["Música do Mapu Huni Kuin, lenta — voz e violão"], icones:["voz","violao"]},
-  {de:"V",   para:"VI",  tempo:5, som:["Kayawake Baine — Mapu Huni Kuin"]},
+  {de:"V",   para:"VI",  tempo:5, som:["Kayawake Baine — Mapu Huni Kuin","Depois do ápice, a desaceleração"]},
 ];
 const temConteudo = tr => ["som","corpo","voz","simb"].some(k => (tr[k]||[]).length);
 const trHead = (tr, extra="", i=0) => `<div class="tr hd${tr.destaque?" destaque":""}${extra}${temConteudo(tr)?" clk":""}" data-t="${i}"><span class="tico">${ICONS.transicao}</span><span class="tl">transição</span><span class="sym">♪</span></div>`;
