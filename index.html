@@ -89,7 +89,7 @@
   .tr.destaque .it{font-size:12px;line-height:1.45;color:#e2d9cb}
   .tr.destaque .ico{width:40px;height:40px;align-self:center}
   .tr .icos{display:flex;flex-direction:column;align-items:center;gap:6px}
-  .tr.destaque .icos{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px;align-self:center}
+  .tr.destaque .icos{display:grid;grid-template-columns:repeat(auto-fit,40px);justify-content:center;gap:8px 14px;max-width:100px;align-self:center}
   .tr .sym{font-family:Georgia,serif;font-size:18px;color:var(--c6);opacity:.85}
   .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
   .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
