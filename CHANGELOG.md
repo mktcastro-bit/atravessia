@@ -2,6 +2,14 @@
 
 ---
 
+## v0.34 — 2026-09-05 · publicada na Vercel
+
+A partitura passa a ser servida em **https://a-travessia.vercel.app** (projeto
+`a-travessia`), com deploy automático a cada push em `main`. Nenhuma alteração
+de conteúdo.
+
+---
+
 ## v0.33 — 2026-09-05 · ícone de transição no cabeçalho
 
 A pedido do autor, o cabeçalho de cada transição ganha um ícone que representa

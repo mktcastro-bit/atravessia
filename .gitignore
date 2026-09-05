@@ -4,3 +4,5 @@
 .Trashes
 Thumbs.db
 *.tmp
+.vercel
+.env*

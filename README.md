@@ -32,6 +32,14 @@ camada, a célula diz *não especificado*, em vez de preenchida por suposição.
 Clicar num movimento ou numa transição abre o trecho integral. Os botões no topo
 isolam uma camada por vez.
 
+### Publicação
+
+A partitura está publicada na Vercel, projeto `a-travessia`, ligada ao repositório
+do GitHub: **todo push em `main` gera um deploy automático.**
+
+- Produção: https://a-travessia.vercel.app
+- O nome `atravessia.vercel.app` pertence a outra pessoa — não é este projeto.
+
 ### Acesso
 
 A página abre com um portal de entrada. Credenciais atuais: **login `vida` · senha `vida`**.
