@@ -2,6 +2,14 @@
 
 ---
 
+## v0.26 — 2026-09-05 · a nota fecha a página
+
+Por decisão do autor, a nota "As pessoas no centro" passa a ser o último
+elemento da partitura — depois do quadro, do painel de detalhe e do aviso de
+rodapé. Nenhuma alteração de texto.
+
+---
+
 ## v0.25 — 2026-09-05 · a paisagem sonora do Vento
 
 Por decisão do autor, o movimento IV (O VENTO) ganha paisagem sonora:
