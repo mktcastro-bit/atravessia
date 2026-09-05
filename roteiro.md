@@ -27,7 +27,7 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 **Estado:** repouso, receptividade, interiorização
 **Elemento:** espaço / água
 **Centro:** corpo inteiro
-**Paisagem sonora:** sound healing, sons longos, harmônicos, tigelas, gongos muito suaves
+**Paisagem sonora:** sound healing, sons longos, harmônicos, tigelas
 
 Os participantes entram e deitam-se. A condução começa pela respiração, sem tentar modificá-la imediatamente: "Perceba o ar entrando." "Perceba o ar saindo." "Não faça nada." "Você não precisa chegar a lugar algum."
 
@@ -38,8 +38,6 @@ A proposta é perceber sensações, temperatura, peso, tensão, pulsação.
 Trabalho com respiração mais consciente.
 
 Depois, a atenção se volta aos sentimentos: "Existe alguma emoção presente? Não procure um nome. Perceba apenas onde ela vive no corpo."
-
-Silêncio.
 
 Sound healing.
 

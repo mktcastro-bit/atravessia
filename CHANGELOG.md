@@ -2,6 +2,14 @@
 
 ---
 
+## v0.28 — 2026-09-05 · Introdução sem gongos e sem silêncio
+
+Por decisão do autor, saem da paisagem sonora da Introdução/Abertura os
+**gongos muito suaves** e o **Silêncio** — no roteiro (a linha de paisagem
+sonora e o parágrafo "Silêncio.") e na partitura (camada e texto integral).
+
+---
+
 ## v0.27 — 2026-09-05 · a trilha se redistribui
 
 Por decisão do autor, corrigindo a v0.25:
