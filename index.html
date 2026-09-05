@@ -99,7 +99,10 @@
   .cell .icos .ico{width:30px;height:30px;color:var(--c6);opacity:.9}
   .cell .icos .ico svg{width:100%;height:100%;display:block}
   .tr.destaque .icos{display:grid;grid-template-columns:repeat(auto-fit,40px);justify-content:center;gap:8px 14px;max-width:100px;align-self:center}
-  .tr .sym{font-family:Georgia,serif;font-size:18px;color:var(--c6);opacity:.85}
+  .tr .sym{font-family:Georgia,serif;font-size:14px;color:var(--c6);opacity:.7}
+  .tr.hd .tico{width:24px;height:24px;color:var(--c6);opacity:.95;flex:none}
+  .tr.hd .tico svg{width:100%;height:100%;display:block}
+  .tr.hd.destaque .tico{width:34px;height:34px}
   .tr .tl,.tr .it,.tr .vazio{writing-mode:vertical-rl;transform:rotate(180deg);line-height:1.25}
   .tr .tl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
   .tr .it{font-size:11px;color:#cdc5b9}
@@ -412,6 +415,11 @@ const ICONS = {
     <path d="M12 12.8v6.6"/>
     <path d="M9.6 17h4.8"/>
   </svg>`,
+  transicao: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 5v14M20 5v14"/>
+    <path d="M7.5 12h8.5"/>
+    <path d="m13 8.5 3.5 3.5-3.5 3.5"/>
+  </svg>`,
   voz: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <rect x="9" y="3" width="6" height="11" rx="3"/>
     <path d="M6 11a6 6 0 0 0 12 0"/>
@@ -432,7 +440,7 @@ const TRANS = [
   {de:"V",   para:"VI",  tempo:5, som:["Kayawake Baine — Mapu Huni Kuin"]},
 ];
 const temConteudo = tr => ["som","corpo","voz","simb"].some(k => (tr[k]||[]).length);
-const trHead = (tr, extra="", i=0) => `<div class="tr hd${tr.destaque?" destaque":""}${extra}${temConteudo(tr)?" clk":""}" data-t="${i}"><span class="sym">♪</span><span class="tl">transição</span></div>`;
+const trHead = (tr, extra="", i=0) => `<div class="tr hd${tr.destaque?" destaque":""}${extra}${temConteudo(tr)?" clk":""}" data-t="${i}"><span class="tico">${ICONS.transicao}</span><span class="tl">transição</span><span class="sym">♪</span></div>`;
 const trCell = (tr, key, extra="") => key !== "som"
   ? `<div class="tr${tr.destaque?" destaque":""}${extra}">${key==="corpo" && (tr.icones_corpo||[]).length ? `<span class="icos">${tr.icones_corpo.map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}</span>` : ""}${(tr[key]||[]).map(x=>`<span class="it">${x}</span>`).join("")}</div>`
   : `<div class="tr${tr.destaque?" destaque":""}${extra}">${(tr.icones||[]).length ? `<span class="icos">${tr.icones.map(k=>ICONS[k]?`<span class="ico">${ICONS[k]}</span>`:"").join("")}</span>` : ""}${tr.som.length ? tr.som.map(x=>`<span class="it">${x}</span>`).join("") : `<span class="vazio">não especificado no roteiro</span>`}</div>`;

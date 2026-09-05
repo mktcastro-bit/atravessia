@@ -2,6 +2,15 @@
 
 ---
 
+## v0.33 — 2026-09-05 · ícone de transição no cabeçalho
+
+A pedido do autor, o cabeçalho de cada transição ganha um ícone que representa
+a própria transição — dois limiares e a passagem entre eles —, acima do rótulo;
+o ♪ permanece, menor. Na coluna de virada o ícone é maior. Nenhuma alteração
+de texto.
+
+---
+
 ## v0.32 — 2026-09-05 · transição Fogo → Despertar
 
 Por decisão do autor, a transição entre O Fogo (V) e O Despertar (VI) é
