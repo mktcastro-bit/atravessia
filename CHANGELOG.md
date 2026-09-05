@@ -2,6 +2,13 @@
 
 ---
 
+## v0.42 — 2026-09-05 · o I chama-se Abertura
+
+Por decisão do autor, o movimento I deixa de ser "Introdução / Abertura" e
+passa a ser só **ABERTURA**, no roteiro e na partitura.
+
+---
+
 ## v0.41 — 2026-09-05 · sai a pergunta do título
 
 Por decisão do autor, sai do cabeçalho a linha *"(Como poderíamos chamar essa

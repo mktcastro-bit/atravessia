@@ -21,7 +21,7 @@ Uma experiência de som, corpo, respiração, movimento, voz, imaginação e sí
 
 ---
 
-## I — INTRODUÇÃO/ ABERTURA: percepção e consciência corporal
+## I — ABERTURA: percepção e consciência corporal
 
 **Estado:** repouso, receptividade, interiorização
 **Elemento:** espaço / água
