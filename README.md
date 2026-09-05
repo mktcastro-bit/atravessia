@@ -19,14 +19,18 @@ Uma jornada sonora, corporal, vocal e simbólica de despertar.
 
 ### Sobre a partitura visual
 
-A partitura **não acrescenta nada ao roteiro**. Ela apenas reorganiza o texto existente:
-os seis movimentos lado a lado na horizontal, e o conteúdo de cada um distribuído em
-quatro camadas — paisagem sonora, corpo e movimento, voz e condução, estado/elemento/centro.
-Onde o roteiro ainda não especifica uma camada, a célula aparece marcada como
-*não especificado no roteiro*, em vez de preenchida por suposição.
+A partitura reorganiza o roteiro: os movimentos lado a lado na horizontal, com as
+transições entre eles, e o conteúdo de cada um distribuído em quatro camadas —
+paisagem sonora, corpo e movimento, voz e condução, estado/elemento/centro. Acima,
+uma faixa de participação e uma linha de tempo.
 
-Clicar num movimento abre o trecho integral do roteiro. Os botões no topo isolam
-uma camada por vez.
+O que a partitura propôs a pedido do autor — o nome de um movimento, um elemento,
+um estado — está marcado como *proposta*, no roteiro e na partitura; a nota ao fim
+da página foi redigida a pedido dele. Onde o roteiro ainda não especifica uma
+camada, a célula diz *não especificado*, em vez de preenchida por suposição.
+
+Clicar num movimento ou numa transição abre o trecho integral. Os botões no topo
+isolam uma camada por vez.
 
 ### Acesso
 

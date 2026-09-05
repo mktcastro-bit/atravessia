@@ -2,6 +2,17 @@
 
 ---
 
+## v0.31 — 2026-09-05 · avisos atualizados
+
+O aviso de rodapé da partitura e a seção "Sobre a partitura visual" do README
+diziam que nada fora acrescentado ao roteiro — verdade na v0.2, não mais.
+Passam a dizer o que vale hoje: conteúdo do roteiro; o que a partitura propôs a
+pedido do autor está marcado como proposta; a nota final foi redigida a pedido
+dele; célula sem conteúdo diz "não especificado"; movimentos e transições abrem
+o trecho integral.
+
+---
+
 ## v0.30 — 2026-09-05 · transição Vento → Fogo
 
 Por decisão do autor, a transição entre O Vento (IV) e O Fogo (V) é **uma
