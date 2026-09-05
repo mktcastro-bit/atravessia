@@ -92,11 +92,12 @@ Corpo deitado. As emoções ativadas pelo elemento água são agora visitadas e 
 ### O despertar do eu superior por meio da voz
 
 **Elemento:** ar
+**Paisagem sonora:** música — violão e voz (Huni Kuin), lenta. Artista: Mapu Huni Kuin.
 **Voz:** vocalizações de mantras — canto e resposta entre o condutor e os participantes
 
 Sentados. Começam as vocalizações de mantras, em canto e resposta com o condutor, para despertar o eu superior por meio da voz.
 
-*(Nome e elemento propostos a pedido do autor. Estado, centro, arquétipo e paisagem sonora ainda não especificados.)*
+*(Nome e elemento propostos a pedido do autor. Estado, centro e arquétipo ainda não especificados.)*
 
 ---
 

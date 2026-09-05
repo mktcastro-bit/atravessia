@@ -2,6 +2,15 @@
 
 ---
 
+## v0.25 — 2026-09-05 · a paisagem sonora do Vento
+
+Por decisão do autor, o movimento IV (O VENTO) ganha paisagem sonora:
+**música — violão e voz (Huni Kuin), lenta; artista: Mapu Huni Kuin.** Entra no
+roteiro e na partitura. Restam não especificados no Vento: estado, centro e
+arquétipo.
+
+---
+
 ## v0.24 — 2026-09-05 · transições com painel de detalhe
 
 A pedido do autor, o cabeçalho ♪ transição passa a ser clicável — como os
