@@ -96,7 +96,7 @@ Por decisão do autor, a transição Mar → Vento (8 min) ganha conteúdo em to
 as camadas: **paisagem sonora — mantra; corpo e movimento — as pessoas
 sentadas; voz e condução — as pessoas entoando mantras.** Na fala do autor
 havia uma palavra ilegível na camada de voz ("… mantras e râlem"), deixada de
-fora até ele esclarecer.
+fora. *Esclarecido em 05/09: era ruído da transcrição de voz; nada a acrescentar.*
 
 **Estado, elemento e centro foram propostos pela partitura a pedido expresso
 do autor**, e estão marcados como proposta: *presença — da escuta à
